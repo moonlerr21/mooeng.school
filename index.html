@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Harmony | Премиальное обучение английскому</title>
+    <title>Moon English School | Премиальное обучение английскому</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -80,6 +80,7 @@
         .logo {
             display: flex;
             align-items: center;
+            text-decoration: none;
         }
         
         .logo img {
@@ -105,6 +106,7 @@
         nav ul {
             display: flex;
             list-style: none;
+            align-items: center;
         }
         
         nav ul li {
@@ -135,6 +137,24 @@
         
         nav ul li a:hover:after {
             width: 100%;
+        }
+        
+        .nav-btn {
+            display: inline-block;
+            background: var(--accent-green);
+            color: var(--pure-white);
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            font-size: 16px;
+            margin-left: 20px;
+        }
+        
+        .nav-btn:hover {
+            background: var(--light-green);
+            transform: translateY(-3px);
         }
         
         .mobile-menu-btn {
@@ -384,7 +404,7 @@
         
         .features {
             display: grid;
-            grid-template-columns: repeat(2, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 25px;
             margin-top: 40px;
         }
@@ -544,6 +564,99 @@
         .program-duration {
             color: var(--text-gray);
             font-size: 15px;
+        }
+        
+        /* Individual Lessons Section */
+        .individual-lessons {
+            background: var(--bg-primary);
+            padding: 100px 0;
+        }
+        
+        .lesson-options {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .lesson-option {
+            background: var(--pure-white);
+            padding: 15px 30px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid rgba(166, 124, 107, 0.2);
+            font-weight: 500;
+        }
+        
+        .lesson-option.active {
+            background: var(--accent-green);
+            color: var(--pure-white);
+            border-color: var(--accent-green);
+        }
+        
+        .teachers-selection {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .teacher-select {
+            background: var(--pure-white);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 1px solid rgba(166, 124, 107, 0.1);
+        }
+        
+        .teacher-select.active {
+            border-color: var(--accent-pink);
+            box-shadow: 0 10px 30px rgba(234, 213, 208, 0.3);
+        }
+        
+        .teacher-select img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid var(--accent-pink);
+        }
+        
+        .teacher-select h4 {
+            margin-bottom: 10px;
+        }
+        
+        .teacher-select p {
+            color: var(--text-gray);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .price-display {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .price-display .price {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--accent-brown);
+            margin-bottom: 20px;
+        }
+        
+        .trial-checkbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        
+        .trial-checkbox input {
+            margin-right: 10px;
         }
         
         /* Results Section */
@@ -786,6 +899,59 @@
             font-size: 16px;
             text-align: left;
             color: var(--text-gray);
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: var(--pure-white);
+            padding: 100px 0;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid rgba(166, 124, 107, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .faq-item:hover {
+            border-color: var(--accent-pink);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            background: var(--bg-primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+        
+        .faq-question i {
+            transition: var(--transition);
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 20px;
+            max-height: 500px;
         }
         
         /* CTA Section */
@@ -1183,6 +1349,11 @@
             .contact-container {
                 grid-template-columns: 1fr;
             }
+            
+            .lesson-options {
+                flex-direction: column;
+                align-items: center;
+            }
         }
         
         @media (max-width: 768px) {
@@ -1207,6 +1378,11 @@
             
             nav ul li {
                 margin: 20px 0;
+            }
+            
+            .nav-btn {
+                margin-left: 0;
+                margin-top: 20px;
             }
             
             .mobile-menu-btn {
@@ -1330,21 +1506,22 @@
     <!-- Header -->
     <header id="header">
         <div class="container header-container">
-            <div class="logo">
-                <img src="https://via.placeholder.com/50x50" alt="English Harmony Logo">
+            <a href="#home" class="logo">
+                <img src="https://via.placeholder.com/50x50" alt="Moon English School Logo">
                 <div class="logo-text">
-                    <h1>English Harmony</h1>
-                    <p>Премиальное обучение</p>
+                    <h1>Moon English School</h1>
+                    <p>mooneng.school</p>
                 </div>
-            </div>
+            </a>
             <nav>
                 <ul id="nav-menu">
-                    <li><a href="#home">Главная</a></li>
-                    <li><a href="#about">Методика</a></li>
+                    <li><a href="#about">Про нас</a></li>
+                    <li><a href="#method">Методика</a></li>
                     <li><a href="#programs">Программы</a></li>
                     <li><a href="#results">Результаты</a></li>
                     <li><a href="#teachers">Преподаватели</a></li>
-                    <li><a href="#contact">Контакты</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#contact" class="nav-btn">Пробный урок</a></li>
                 </ul>
                 <button class="mobile-menu-btn" id="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
@@ -1380,16 +1557,12 @@
                     <div class="counter-text">Довольных студентов</div>
                 </div>
                 <div class="counter-item">
-                    <div class="counter-number" id="teachersCount">0</div>
-                    <div class="counter-text">Профессиональных преподавателей</div>
-                </div>
-                <div class="counter-item">
-                    <div class="counter-number" id="yearsCount">0</div>
-                    <div class="counter-text">Лет успешной работы</div>
-                </div>
-                <div class="counter-item">
                     <div class="counter-number" id="countriesCount">0</div>
                     <div class="counter-text">Стран, где говорят наши студенты</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number" id="materialsCount">0</div>
+                    <div class="counter-text">Материалов и тем для изучения</div>
                 </div>
             </div>
         </div>
@@ -1399,8 +1572,8 @@
     <section class="section" id="about">
         <div class="container">
             <div class="section-title">
-                <h2>Наша философия обучения</h2>
-                <p>Мы создали среду, где английский усваивается естественно и с удовольствием</p>
+                <h2>Наши ценности</h2>
+                <p>✨ Английский, который вдохновляет</p>
             </div>
             <div class="about-content">
                 <div class="about-img">
@@ -1410,17 +1583,17 @@
                     <div class="guarantee-badge">
                         <i class="fas fa-check-circle"></i> Гарантия результата
                     </div>
-                    <h3>Обучение должно приносить радость и вдохновение</h3>
-                    <p>Наша методика основана на принципах естественного усвоения языка. Мы создаем атмосферу доверия и комфорта, где ошибки - это часть процесса, а не повод для стресса.</p>
-                    <p>Вместо зубрежки - живое общение, вместо страха - любопытство, вместо давления - поддержка. Так английский становится частью вашей жизни, а не временной обязанностью.</p>
+                    <h3>Мы верим, что обучение должно быть в радость</h3>
+                    <p>Без стресса, без зубрёжки, без страха ошибиться — только живое общение, поддержка и естественное погружение в язык.</p>
+                    <p>У нас английский становится не обязанностью, а частью жизни. Вы говорите с первых занятий, растёте в своём ритме и получаете удовольствие от процесса.</p>
                     <div class="features">
                         <div class="feature-item">
                             <div class="feature-icon">
                                 <i class="fas fa-heart"></i>
                             </div>
                             <div class="feature-text">
-                                <h4>Комфортная среда</h4>
-                                <p>Уютные классы и доброжелательная атмосфера без стресса</p>
+                                <h4>Комфортная атмосфера</h4>
+                                <p>Уют, тепло и пространство, где можно быть собой и не бояться</p>
                             </div>
                         </div>
                         <div class="feature-item">
@@ -1428,8 +1601,8 @@
                                 <i class="fas fa-comments"></i>
                             </div>
                             <div class="feature-text">
-                                <h4>Естественное общение</h4>
-                                <p>80% времени занятия - это практика в реальных ситуациях</p>
+                                <h4>Максимум практики</h4>
+                                <p>80% занятия — это разговор, как в реальной жизни</p>
                             </div>
                         </div>
                         <div class="feature-item">
@@ -1437,8 +1610,8 @@
                                 <i class="fas fa-seedling"></i>
                             </div>
                             <div class="feature-text">
-                                <h4>Постепенное развитие</h4>
-                                <p>Программа, которая растет вместе с вашими навыками</p>
+                                <h4>Плавное развитие</h4>
+                                <p>Программа растёт вместе с вами — шаг за шагом, без перегруза</p>
                             </div>
                         </div>
                         <div class="feature-item">
@@ -1451,6 +1624,34 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Method Section -->
+    <section class="section" id="method">
+        <div class="container">
+            <div class="section-title">
+                <h2>Наш подход</h2>
+                <p>Персонализированный подход к каждому студенту</p>
+            </div>
+            <div class="about-content" style="flex-direction: row-reverse;">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Наш подход">
+                </div>
+                <div class="about-text">
+                    <h3>Индивидуальная программа для каждого</h3>
+                    <p>Мы создаем программу с учетом ваших целей, уровня и особенностей восприятия информации. Полное погружение в языковую среду с первого занятия, даже для начинающих.</p>
+                    <p>Наши студенты достигают результатов благодаря:</p>
+                    <ul style="margin-bottom: 25px; color: var(--text-gray); padding-left: 20px;">
+                        <li>Коррекции произношения с первых уроков</li>
+                        <li>Домашним заданиям с детальной проверкой</li>
+                        <li>Гибкому графику занятий</li>
+                        <li>Разговорным клубам с носителями языка</li>
+                        <li>Поддержке преподавателя между занятиями</li>
+                    </ul>
+                    <a href="#contact" class="btn">Начать обучение</a>
                 </div>
             </div>
         </div>
@@ -1513,6 +1714,45 @@
         </div>
     </section>
 
+    <!-- Individual Lessons Section -->
+    <section class="section individual-lessons">
+        <div class="container">
+            <div class="section-title">
+                <h2>Индивидуальные занятия</h2>
+                <p>Персональный подход для максимального результата</p>
+            </div>
+            
+            <div class="lesson-options">
+                <div class="lesson-option active" data-lessons="4">4 занятия</div>
+                <div class="lesson-option" data-lessons="8">8 занятий</div>
+                <div class="lesson-option" data-lessons="12">12 занятий</div>
+            </div>
+            
+            <div class="teachers-selection">
+                <div class="teacher-select active" data-teacher="valeria" data-price4="120" data-price8="220" data-price12="300">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Валерия">
+                    <h4>Валерия</h4>
+                    <p>Основатель школы, специалист по коммуникативному подходу</p>
+                </div>
+                <div class="teacher-select" data-teacher="anastasia" data-price4="100" data-price8="180" data-price12="250">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Анастасия">
+                    <h4>Анастасия</h4>
+                    <p>Специалист по подготовке к экзаменам и деловому английскому</p>
+                </div>
+            </div>
+            
+            <div class="price-display">
+                <div class="price">$120</div>
+                <a href="#contact" class="btn">Купить пакет</a>
+            </div>
+            
+            <div class="trial-checkbox">
+                <input type="checkbox" id="trialLesson" checked>
+                <label for="trialLesson">Это пробное занятие (бесплатно)</label>
+            </div>
+        </div>
+    </section>
+
     <!-- Results Section -->
     <section class="section results" id="results">
         <div class="container">
@@ -1556,16 +1796,16 @@
             <div class="teachers-grid">
                 <div class="teacher-card">
                     <div class="teacher-img">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Анна Смирнова">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Валерия">
                         <div class="teacher-social">
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a href="https://www.instagram.com/mooneng.school/"><i class="fab fa-instagram"></i></a>
+                            <a href="mailto:ismartsdn4371@gmail.com"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
                     <div class="teacher-info">
-                        <h3>Анна Смирнова</h3>
-                        <p>Эксперт по коммуникации</p>
+                        <h3>Валерия</h3>
+                        <p>Основатель школы, эксперт по коммуникации</p>
                         <div class="teacher-rating">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -1574,12 +1814,12 @@
                             <i class="fas fa-star"></i>
                         </div>
                         <p class="bio">"Моя цель - чтобы каждый студент почувствовал радость от свободного общения. Английский - это не барьер, а мост к новым возможностям."</p>
-                        <a href="#contact" class="btn" style="width: 100%; text-align: center;">Записаться к Анне</a>
+                        <a href="#contact" class="btn" style="width: 100%; text-align: center;">Записаться к Валерии</a>
                     </div>
                 </div>
                 <div class="teacher-card">
                     <div class="teacher-img">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Дэвид Джонсон">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Анастасия">
                         <div class="teacher-social">
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
                             <a href="#"><i class="fab fa-instagram"></i></a>
@@ -1587,8 +1827,8 @@
                         </div>
                     </div>
                     <div class="teacher-info">
-                        <h3>Дэвид Джонсон</h3>
-                        <p>Носитель языка</p>
+                        <h3>Анастасия</h3>
+                        <p>Специалист по подготовке к экзаменам</p>
                         <div class="teacher-rating">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -1596,31 +1836,8 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <p class="bio">"Learning should be fun! Я помогу вам преодолеть страх ошибок и начать говорить свободно и уверенно."</p>
-                        <a href="#contact" class="btn" style="width: 100%; text-align: center;">Записаться к Дэвиду</a>
-                    </div>
-                </div>
-                <div class="teacher-card">
-                    <div class="teacher-img">
-                        <img src="https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1467&q=80" alt="Ольга Петрова">
-                        <div class="teacher-social">
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                        </div>
-                    </div>
-                    <div class="teacher-info">
-                        <h3>Ольга Петрова</h3>
-                        <p>Эксперт по подготовке</p>
-                        <div class="teacher-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
                         <p class="bio">"Экзамены - это не страшно, когда знаешь как к ним готовиться. Я научу вас стратегиям, которые действительно работают."</p>
-                        <a href="#contact" class="btn" style="width: 100%; text-align: center;">Записаться к Ольге</a>
+                        <a href="#contact" class="btn" style="width: 100%; text-align: center;">Записаться к Анастасии</a>
                     </div>
                 </div>
             </div>
@@ -1628,16 +1845,16 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="section testimonials">
+    <section class="section testimonials" id="reviews">
         <div class="container">
             <div class="section-title">
                 <h2>Истории наших студентов</h2>
-                <p>Как изменилась их жизнь после курса</p>
+                <p>Как изменилась их жизнь после нашего курса</p>
             </div>
             <div class="testimonials-slider">
                 <div class="testimonial-item">
                     <div class="testimonial-text">
-                        <p>Я всегда боялась говорить на английском, пока не пришла в English Harmony. Здесь такая теплая атмосфера, что страх ушел сам собой. Через 3 месяца я поехала в отпуск одна и впервые в жизни свободно общалась с людьми! Это невероятное чувство.</p>
+                        <p>Я всегда боялась говорить на английском, пока не пришла в Moon English School. Здесь такая теплая атмосфера, что страх ушел сам собой. Через 3 месяца я поехала в отпуск одна и впервые в жизни свободно общалась с людьми! Это невероятное чувство.</p>
                     </div>
                     <div class="testimonial-author">
                         <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Анна Ковалева">
@@ -1645,6 +1862,78 @@
                             <h4>Анна Ковалева</h4>
                             <p>Прошла курс "Английский для жизни"</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Часто задаваемые вопросы</h2>
+                <p>Ответы на самые популярные вопросы</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Чи можна обирати зручний мені графік?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Так, звичайно! Час для занять підбираємо зручний вам, в проміжку між 8:00 та 22:00 за українським часом. Працюємо також на вихідних. Графік може бути як стабільним, так і гнучким — як зручно.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Чи підійде, якщо я новачок?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Так, ми маємо окрему програму занять для новачків з нахилом на розмовний аспект. Ми почнемо з основ і будемо рухатися в комфортному для вас темпі.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Чи можна оплачувати окремо за кожне заняття / частинами?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Зазвичай оплата у нашій школі пакетом за 4 або 8 занять, але за потреби ми йдемо назустріч і даємо можливість оплачувати по заняттю або ж більший пакет занять одразу, якщо так комфортно.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Коли можна чекати результат?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ми працюємо так, щоб ви бачили свої досягнення після кожного заняття. Звичайно, англійську не можна вивчити за місяць, але щоб заговорити, не потрібно вчитись все життя. Наприклад, з новачка цілком реалістично вийти на рівень Elementary за ~2 місяці, маємо кейси, коли за ~5 місяців учні доходили з новачка до впевненого А2+. Якщо ви вже на рівні Pre-Intermediate чи вище, кожного уроку ви відчуватимете збагачення словника і навички висловлювати свою думку з різних життєвих тем якісно і наповнено.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Як часто потрібно займатись?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Рекомендуємо 2-3 заняття на тиждень для оптимального результату. Але ми підлаштовуємось під ваш графік і можливості.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Які правила скасування\переносу занять?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ви можете перенести або скасувати заняття без втрати коштів, якщо повідомите про це за 12 годин до початку. У разі пізнього скасування заняття вважається проведеним.</p>
                     </div>
                 </div>
             </div>
@@ -1673,20 +1962,11 @@
                     <div class="contact-details">
                         <div class="contact-item">
                             <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Адрес</h4>
-                                <p>г. Киев, ул. Крещатик, 25, офис 42</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
                                 <i class="fas fa-phone-alt"></i>
                             </div>
                             <div class="contact-text">
                                 <h4>Телефон</h4>
-                                <p><a href="tel:+380991234567">+38 (099) 123-45-67</a></p>
+                                <p><a href="tel:+14376603208">+1 (437) 660-3208</a></p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -1695,25 +1975,14 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Email</h4>
-                                <p><a href="mailto:info@englishharmony.com">info@englishharmony.com</a></p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div class="contact-text">
-                                <h4>Часы работы</h4>
-                                <p>Пн-Пт: 9:00 - 21:00<br>Сб: 10:00 - 18:00<br>Вс: выходной</p>
+                                <p><a href="mailto:ismartsdn4371@gmail.com">ismartsdn4371@gmail.com</a></p>
                             </div>
                         </div>
                     </div>
                     <h3>Мы в соцсетях</h3>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/mooneng.school/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://t.me/moonlerr"><i class="fab fa-telegram"></i></a>
                     </div>
                 </div>
                 <div class="contact-form">
@@ -1737,12 +2006,17 @@
                                 <option value="communication">Английский для жизни</option>
                                 <option value="business">Английский для работы</option>
                                 <option value="ielts">Подготовка к экзаменам</option>
+                                <option value="individual">Индивидуальные занятия</option>
                                 <option value="notsure">Не знаю, нужна консультация</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="message">Ваше сообщение</label>
                             <textarea id="message" name="message"></textarea>
+                        </div>
+                        <div class="form-group trial-checkbox">
+                            <input type="checkbox" id="isTrial" name="isTrial" checked>
+                            <label for="isTrial">Это пробное занятие (бесплатно)</label>
                         </div>
                         <button type="submit" class="btn">Отправить заявку</button>
                     </form>
@@ -1756,47 +2030,47 @@
         <div class="container">
             <div class="footer-container">
                 <div class="footer-col">
-                    <h3>English Harmony</h3>
+                    <h3>Moon English School</h3>
                     <p>Школа английского языка, где обучение становится удовольствием, а результаты - неизбежны.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/mooneng.school/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://t.me/moonlerr"><i class="fab fa-telegram"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
                     <h3>Программы</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Английский для жизни</a></li>
-                        <li><a href="#">Английский для работы</a></li>
-                        <li><a href="#">Подготовка к экзаменам</a></li>
-                        <li><a href="#">Индивидуальные занятия</a></li>
-                        <li><a href="#">Корпоративное обучение</a></li>
+                        <li><a href="#programs">Английский для жизни</a></li>
+                        <li><a href="#programs">Английский для работы</a></li>
+                        <li><a href="#programs">Подготовка к экзаменам</a></li>
+                        <li><a href="#programs">Индивидуальные занятия</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Компания</h3>
+                    <h3>Навигация</h3>
                     <ul class="footer-links">
+                        <li><a href="#home">Главная</a></li>
                         <li><a href="#about">О нас</a></li>
+                        <li><a href="#method">Методика</a></li>
                         <li><a href="#teachers">Преподаватели</a></li>
-                        <li><a href="#results">Результаты</a></li>
+                        <li><a href="#reviews">Отзывы</a></li>
                         <li><a href="#contact">Контакты</a></li>
-                        <li><a href="#">Вакансии</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Подписаться на новости</h3>
-                    <p>Получайте полезные материалы и специальные предложения</p>
-                    <form class="footer-newsletter">
-                        <input type="email" placeholder="Ваш email" required>
-                        <button type="submit" class="btn">Подписаться</button>
-                    </form>
+                    <h3>Контакты</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:+14376603208">+1 (437) 660-3208</a></li>
+                        <li><a href="mailto:ismartsdn4371@gmail.com">ismartsdn4371@gmail.com</a></li>
+                        <li><a href="https://www.instagram.com/mooneng.school/">Instagram</a></li>
+                        <li><a href="https://t.me/moonlerr">Telegram</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2023 English Harmony. Все права защищены. <a href="#" style="color: var(--accent-pink);">Политика конфиденциальности</a></p>
+                <p>&copy; 2023 Moon English School. Все права защищены. <a href="#" style="color: var(--accent-pink);">Политика конфиденциальности</a></p>
             </div>
         </div>
     </footer>
@@ -1865,10 +2139,9 @@
             
             counters.forEach(counter => {
                 const target = +counter.getAttribute('data-target') || 
-                    (counter.id === 'studentsCount' ? 10250 :
-                    counter.id === 'teachersCount' ? 28 :
-                    counter.id === 'yearsCount' ? 12 :
-                    counter.id === 'countriesCount' ? 45 : 0);
+                    (counter.id === 'studentsCount' ? 50 :
+                    counter.id === 'countriesCount' ? 15 :
+                    counter.id === 'materialsCount' ? 300 : 0);
                 
                 const count = +counter.innerText;
                 const increment = target / speed;
@@ -1969,6 +2242,60 @@
                 }, 500);
             }, 30000); // Hide after 30 seconds
         }
+        
+        // Individual lessons selection
+        const lessonOptions = document.querySelectorAll('.lesson-option');
+        const teacherSelects = document.querySelectorAll('.teacher-select');
+        const priceDisplay = document.querySelector('.price-display .price');
+        
+        let selectedLessons = 4;
+        let selectedTeacher = 'valeria';
+        
+        // Lesson options click handler
+        lessonOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                lessonOptions.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+                selectedLessons = parseInt(option.dataset.lessons);
+                updatePrice();
+            });
+        });
+        
+        // Teacher selection click handler
+        teacherSelects.forEach(teacher => {
+            teacher.addEventListener('click', () => {
+                teacherSelects.forEach(t => t.classList.remove('active'));
+                teacher.classList.add('active');
+                selectedTeacher = teacher.dataset.teacher;
+                updatePrice();
+            });
+        });
+        
+        // Update price based on selection
+        function updatePrice() {
+            const activeTeacher = document.querySelector('.teacher-select.active');
+            const price = activeTeacher.dataset[`price${selectedLessons}`];
+            priceDisplay.textContent = `$${price}`;
+        }
+        
+        // FAQ accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(faq => {
+                    if (faq !== item) {
+                        faq.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
     </script>
 </body>
 </html>
