@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moon English School | Премиальное обучение английскому</title>
+    <title>Moon English School | Навчання англійської з задоволенням</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -321,6 +321,22 @@
         .counter-text {
             font-size: 18px;
             opacity: 0.9;
+        }
+        
+        .country-flags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .country-flag {
+            width: 40px;
+            height: 30px;
+            border-radius: 4px;
+            object-fit: cover;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         
         /* About Section */
@@ -1499,7 +1515,7 @@
     <!-- Scarcity Banner -->
     <div class="scarcity-banner" id="scarcityBanner">
         <div class="container">
-            <span id="bannerText">✨ Только сегодня! Скидка 30% на все курсы! Осталось <span id="countdown">23:59:59</span> ✨</span>
+            <span id="bannerText">✨ Тільки сьогодні! Знижка 30% на всі курси! Залишилось <span id="countdown">23:59:59</span> ✨</span>
         </div>
     </div>
 
@@ -1507,21 +1523,18 @@
     <header id="header">
         <div class="container header-container">
             <a href="#home" class="logo">
-                <img src="https://via.placeholder.com/50x50" alt="Moon English School Logo">
                 <div class="logo-text">
-                    <h1>Moon English School</h1>
-                    <p>mooneng.school</p>
+                    <h1>.mooneng.school</h1>
                 </div>
             </a>
             <nav>
                 <ul id="nav-menu">
                     <li><a href="#about">Про нас</a></li>
                     <li><a href="#method">Методика</a></li>
-                    <li><a href="#programs">Программы</a></li>
-                    <li><a href="#results">Результаты</a></li>
-                    <li><a href="#teachers">Преподаватели</a></li>
-                    <li><a href="#reviews">Отзывы</a></li>
-                    <li><a href="#contact" class="nav-btn">Пробный урок</a></li>
+                    <li><a href="#programs">Програми</a></li>
+                    <li><a href="#teachers">Викладачі</a></li>
+                    <li><a href="#reviews">Відгуки</a></li>
+                    <li><a href="#contact" class="nav-btn">Пробний урок</a></li>
                 </ul>
                 <button class="mobile-menu-btn" id="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
@@ -1535,11 +1548,11 @@
         <div class="container">
             <div class="hero-content">
                 <div class="sticker" style="top: -20px; left: -20px; background: var(--accent-pink); color: var(--text-dark);">New!</div>
-                <h2>Английский, который вдохновляет</h2>
-                <p class="handwritten">Обучение в атмосфере тепла и заботы</p>
+                <h2>Англійська, яка надихає</h2>
+                <p class="handwritten">Навчання в атмосфері тепла і турботи</p>
                 <div class="hero-buttons">
-                    <a href="#programs" class="btn" id="ctaBtn">Выбрать программу</a>
-                    <a href="#contact" class="btn btn-outline">Бесплатный урок</a>
+                    <a href="#programs" class="btn" id="ctaBtn">Обрати програму</a>
+                    <a href="#contact" class="btn btn-outline">Безкоштовний урок</a>
                 </div>
             </div>
         </div>
@@ -1553,16 +1566,32 @@
         <div class="container">
             <div class="counter-grid">
                 <div class="counter-item">
-                    <div class="counter-number" id="studentsCount">0</div>
-                    <div class="counter-text">Довольных студентов</div>
+                    <div class="counter-number" id="studentsCount">50</div>
+                    <div class="counter-text">Задоволених студентів</div>
                 </div>
                 <div class="counter-item">
-                    <div class="counter-number" id="countriesCount">0</div>
-                    <div class="counter-text">Стран, где говорят наши студенты</div>
+                    <div class="counter-number" id="countriesCount">15</div>
+                    <div class="counter-text">Країн, де говорять наші студенти</div>
+                    <div class="country-flags">
+                        <img src="https://flagcdn.com/w20/us.png" alt="USA" class="country-flag">
+                        <img src="https://flagcdn.com/w20/ca.png" alt="Canada" class="country-flag">
+                        <img src="https://flagcdn.com/w20/pl.png" alt="Poland" class="country-flag">
+                        <img src="https://flagcdn.com/w20/es.png" alt="Spain" class="country-flag">
+                        <img src="https://flagcdn.com/w20/fr.png" alt="France" class="country-flag">
+                        <img src="https://flagcdn.com/w20/pt.png" alt="Portugal" class="country-flag">
+                        <img src="https://flagcdn.com/w20/nl.png" alt="Netherlands" class="country-flag">
+                        <img src="https://flagcdn.com/w20/de.png" alt="Germany" class="country-flag">
+                        <img src="https://flagcdn.com/w20/it.png" alt="Italy" class="country-flag">
+                        <img src="https://flagcdn.com/w20/eg.png" alt="Egypt" class="country-flag">
+                        <img src="https://flagcdn.com/w20/tr.png" alt="Turkey" class="country-flag">
+                        <img src="https://flagcdn.com/w20/mx.png" alt="Mexico" class="country-flag">
+                        <img src="https://flagcdn.com/w20/do.png" alt="Dominican Republic" class="country-flag">
+                        <img src="https://flagcdn.com/w20/cz.png" alt="Czech Republic" class="country-flag">
+                    </div>
                 </div>
                 <div class="counter-item">
-                    <div class="counter-number" id="materialsCount">0</div>
-                    <div class="counter-text">Материалов и тем для изучения</div>
+                    <div class="counter-number" id="materialsCount">300</div>
+                    <div class="counter-text">Тем і матеріалів для вивчення</div>
                 </div>
             </div>
         </div>
@@ -1572,8 +1601,8 @@
     <section class="section" id="about">
         <div class="container">
             <div class="section-title">
-                <h2>Наши ценности</h2>
-                <p>✨ Английский, который вдохновляет</p>
+                <h2>Наші цінності</h2>
+                <p>✨ Англійська, яка надихає</p>
             </div>
             <div class="about-content">
                 <div class="about-img">
@@ -1581,19 +1610,19 @@
                 </div>
                 <div class="about-text">
                     <div class="guarantee-badge">
-                        <i class="fas fa-check-circle"></i> Гарантия результата
+                        <i class="fas fa-check-circle"></i> Гарантія результату
                     </div>
-                    <h3>Мы верим, что обучение должно быть в радость</h3>
-                    <p>Без стресса, без зубрёжки, без страха ошибиться — только живое общение, поддержка и естественное погружение в язык.</p>
-                    <p>У нас английский становится не обязанностью, а частью жизни. Вы говорите с первых занятий, растёте в своём ритме и получаете удовольствие от процесса.</p>
+                    <h3>Ми віримо, що навчання має бути в радість</h3>
+                    <p>Без стресу, без зубріння, без страху помилитись — лише живе спілкування, підтримка і природне занурення в мову.</p>
+                    <p>У нас англійська стає не обов'язком, а частиною життя. Ви говорите з перших занять, росте у своєму ритмі і отримуєте задоволення від процесу.</p>
                     <div class="features">
                         <div class="feature-item">
                             <div class="feature-icon">
                                 <i class="fas fa-heart"></i>
                             </div>
                             <div class="feature-text">
-                                <h4>Комфортная атмосфера</h4>
-                                <p>Уют, тепло и пространство, где можно быть собой и не бояться</p>
+                                <h4>Комфортна атмосфера</h4>
+                                <p>Затишок, тепло і простір, де можна бути собою і не боятись</p>
                             </div>
                         </div>
                         <div class="feature-item">
@@ -1602,7 +1631,7 @@
                             </div>
                             <div class="feature-text">
                                 <h4>Максимум практики</h4>
-                                <p>80% занятия — это разговор, как в реальной жизни</p>
+                                <p>80% заняття — це розмова, як у реальному житті</p>
                             </div>
                         </div>
                         <div class="feature-item">
@@ -1610,8 +1639,8 @@
                                 <i class="fas fa-seedling"></i>
                             </div>
                             <div class="feature-text">
-                                <h4>Плавное развитие</h4>
-                                <p>Программа растёт вместе с вами — шаг за шагом, без перегруза</p>
+                                <h4>Плавний розвиток</h4>
+                                <p>Програма росте разом з вами — крок за кроком, без перевантаження</p>
                             </div>
                         </div>
                         <div class="feature-item">
@@ -1619,8 +1648,8 @@
                                 <i class="fas fa-smile"></i>
                             </div>
                             <div class="feature-text">
-                                <h4>Удовольствие от процесса</h4>
-                                <p>Занятия, которые вы ждете с нетерпением</p>
+                                <h4>Задоволення від процесу</h4>
+                                <p>Заняття, яких ви чекаєте із нетерпінням</p>
                             </div>
                         </div>
                     </div>
@@ -1633,25 +1662,25 @@
     <section class="section" id="method">
         <div class="container">
             <div class="section-title">
-                <h2>Наш подход</h2>
-                <p>Персонализированный подход к каждому студенту</p>
+                <h2>Наш підхід</h2>
+                <p>Персоналізований підхід до кожного студента</p>
             </div>
             <div class="about-content" style="flex-direction: row-reverse;">
                 <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Наш подход">
+                    <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Наш підхід">
                 </div>
                 <div class="about-text">
-                    <h3>Индивидуальная программа для каждого</h3>
-                    <p>Мы создаем программу с учетом ваших целей, уровня и особенностей восприятия информации. Полное погружение в языковую среду с первого занятия, даже для начинающих.</p>
-                    <p>Наши студенты достигают результатов благодаря:</p>
+                    <h3>Індивідуальна програма для кожного</h3>
+                    <p>Ми створюємо програму з урахуванням ваших цілей, рівня та особливостей сприйняття інформації. Повне занурення в мовне середовище з першого заняття, навіть для початківців.</p>
+                    <p>Наші студенти досягають результатів завдяки:</p>
                     <ul style="margin-bottom: 25px; color: var(--text-gray); padding-left: 20px;">
-                        <li>Коррекции произношения с первых уроков</li>
-                        <li>Домашним заданиям с детальной проверкой</li>
-                        <li>Гибкому графику занятий</li>
-                        <li>Разговорным клубам с носителями языка</li>
-                        <li>Поддержке преподавателя между занятиями</li>
+                        <li>Корекції вимови з перших уроків</li>
+                        <li>Домашнім завданням з детальною перевіркою</li>
+                        <li>Гнучкому графіку занять</li>
+                        <li>Розмовним клубам з носіями мови</li>
+                        <li>Підтримці викладача між заняттями</li>
                     </ul>
-                    <a href="#contact" class="btn">Начать обучение</a>
+                    <a href="#contact" class="btn">Почати навчання</a>
                 </div>
             </div>
         </div>
@@ -1661,53 +1690,50 @@
     <section class="section programs" id="programs">
         <div class="container">
             <div class="section-title">
-                <h2>Наши программы</h2>
-                <p>Выберите программу, которая соответствует вашим целям и текущему уровню</p>
+                <h2>Наші програми</h2>
+                <p>Оберіть програму, яка відповідає вашим цілям і поточному рівню</p>
             </div>
             <div class="programs-grid">
                 <div class="program-card">
-                    <div class="program-badge">Самый популярный</div>
+                    <div class="program-badge">Найпопулярніша</div>
                     <div class="program-img">
-                        <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Разговорный английский">
+                        <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Розмовна англійська">
                     </div>
                     <div class="program-content">
-                        <h3>Английский для жизни</h3>
-                        <p>Программа для тех, кто хочет свободно общаться в путешествиях и повседневных ситуациях. Учимся с удовольствием и без стресса.</p>
+                        <h3>Англійська для життя</h3>
+                        <p>Програма для тих, хто хоче вільно спілкуватись у подорожах і повсякденних ситуаціях. Вчимось із задоволенням і без стресу.</p>
                         <div class="program-meta">
-                            <span class="program-price">$150 <span class="price-slash">$220</span></span>
-                            <span class="program-duration">3 месяца</span>
+                            <span class="program-duration">3 місяці</span>
                         </div>
-                        <a href="#contact" class="btn" style="width: 100%; text-align: center; margin-top: 20px;">Записаться</a>
+                        <a href="#contact" class="btn" style="width: 100%; text-align: center; margin-top: 20px;">Записатись</a>
                     </div>
                 </div>
                 <div class="program-card">
-                    <div class="program-badge">Новый набор</div>
+                    <div class="program-badge">Новий набір</div>
                     <div class="program-img">
-                        <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Деловой английский">
+                        <img src="https://images.unsplash.com/photo-1551033406-611cf9a28f67?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Ділова англійська">
                     </div>
                     <div class="program-content">
-                        <h3>Английский для работы</h3>
-                        <p>Для тех, кто хочет уверенно чувствовать себя в профессиональной среде. Деловые встречи, переписка и презентации без стресса.</p>
+                        <h3>Англійська для роботи</h3>
+                        <p>Для тих, хто хоче впевнено почуватись у професійному середовищі. Ділові зустрічі, листування і презентації без стресу.</p>
                         <div class="program-meta">
-                            <span class="program-price">$250 <span class="price-slash">$350</span></span>
-                            <span class="program-duration">4 месяца</span>
+                            <span class="program-duration">4 місяці</span>
                         </div>
-                        <a href="#contact" class="btn" style="width: 100%; text-align: center; margin-top: 20px;">Записаться</a>
+                        <a href="#contact" class="btn" style="width: 100%; text-align: center; margin-top: 20px;">Записатись</a>
                     </div>
                 </div>
                 <div class="program-card">
-                    <div class="program-badge">Интенсив</div>
+                    <div class="program-badge">Інтенсив</div>
                     <div class="program-img">
-                        <img src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Подготовка к экзаменам">
+                        <img src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Підготовка до іспитів">
                     </div>
                     <div class="program-content">
-                        <h3>Подготовка к экзаменам</h3>
-                        <p>Эффективная подготовка к IELTS и TOEFL с заботой о вашем психологическом комфорте. Максимальный результат без перегрузок.</p>
+                        <h3>Підготовка до іспитів</h3>
+                        <p>Ефективна підготовка до IELTS і TOEFL з турботою про ваш психологічний комфорт. Максимальний результат без перевантажень.</p>
                         <div class="program-meta">
-                            <span class="program-price">$300 <span class="price-slash">$450</span></span>
-                            <span class="program-duration">2 месяца</span>
+                            <span class="program-duration">2 місяці</span>
                         </div>
-                        <a href="#contact" class="btn" style="width: 100%; text-align: center; margin-top: 20px;">Записаться</a>
+                        <a href="#contact" class="btn" style="width: 100%; text-align: center; margin-top: 20px;">Записатись</a>
                     </div>
                 </div>
             </div>
@@ -1718,37 +1744,37 @@
     <section class="section individual-lessons">
         <div class="container">
             <div class="section-title">
-                <h2>Индивидуальные занятия</h2>
-                <p>Персональный подход для максимального результата</p>
+                <h2>Індивідуальні заняття</h2>
+                <p>Персональний підхід для максимального результату</p>
             </div>
             
             <div class="lesson-options">
-                <div class="lesson-option active" data-lessons="4">4 занятия</div>
-                <div class="lesson-option" data-lessons="8">8 занятий</div>
-                <div class="lesson-option" data-lessons="12">12 занятий</div>
+                <div class="lesson-option active" data-lessons="4">4 заняття</div>
+                <div class="lesson-option" data-lessons="8">8 занять</div>
+                <div class="lesson-option" data-lessons="12">12 занять</div>
             </div>
             
             <div class="teachers-selection">
                 <div class="teacher-select active" data-teacher="valeria" data-price4="120" data-price8="220" data-price12="300">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Валерия">
-                    <h4>Валерия</h4>
-                    <p>Основатель школы, специалист по коммуникативному подходу</p>
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Валерія">
+                    <h4>Валерія</h4>
+                    <p>Засновниця школи, спеціаліст з комунікативного підходу</p>
                 </div>
                 <div class="teacher-select" data-teacher="anastasia" data-price4="100" data-price8="180" data-price12="250">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Анастасия">
-                    <h4>Анастасия</h4>
-                    <p>Специалист по подготовке к экзаменам и деловому английскому</p>
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Анастасія">
+                    <h4>Анастасія</h4>
+                    <p>Спеціаліст з підготовки до іспитів і ділової англійської</p>
                 </div>
             </div>
             
             <div class="price-display">
-                <div class="price">$120</div>
-                <a href="#contact" class="btn">Купить пакет</a>
+                <div class="price">1200 грн</div>
+                <a href="#contact" class="btn">Купити пакет</a>
             </div>
             
             <div class="trial-checkbox">
                 <input type="checkbox" id="trialLesson" checked>
-                <label for="trialLesson">Это пробное занятие (бесплатно)</label>
+                <label for="trialLesson">Це пробне заняття (безкоштовно)</label>
             </div>
         </div>
     </section>
@@ -1757,30 +1783,30 @@
     <section class="section results" id="results">
         <div class="container">
             <div class="section-title">
-                <h2>Ваши перемены</h2>
-                <p>Что изменится в вашей жизни после нашего курса</p>
+                <h2>Ваші зміни</h2>
+                <p>Що зміниться у вашому житті після нашого курсу</p>
             </div>
             <div class="results-grid">
                 <div class="result-card">
                     <div class="result-icon">
                         <i class="fas fa-comment-dots"></i>
                     </div>
-                    <h3>Свобода общения</h3>
-                    <p>Вы забудете, что такое языковой барьер, и начнете получать удовольствие от разговоров на английском</p>
+                    <h3>Свобода спілкування</h3>
+                    <p>Ви забудете, що таке мовний бар'єр, і почнете отримувати задоволення від розмов англійською</p>
                 </div>
                 <div class="result-card">
                     <div class="result-icon">
                         <i class="fas fa-globe"></i>
                     </div>
-                    <h3>Новые возможности</h3>
-                    <p>Путешествия, работа и общение без границ станут вашей новой реальностью</p>
+                    <h3>Нові можливості</h3>
+                    <p>Подорожі, робота і спілкування без кордонів стануть вашою новою реальністю</p>
                 </div>
                 <div class="result-card">
                     <div class="result-icon">
                         <i class="fas fa-user-check"></i>
                     </div>
-                    <h3>Уверенность в себе</h3>
-                    <p>Вы удивитесь, насколько легко и приятно может быть учиться, когда вас поддерживают</p>
+                    <h3>Впевненість у собі</h3>
+                    <p>Ви здивуєтесь, наскільки легко і приємно може бути вчитись, коли вас підтримують</p>
                 </div>
             </div>
         </div>
@@ -1790,13 +1816,13 @@
     <section class="section" id="teachers">
         <div class="container">
             <div class="section-title">
-                <h2>Наши преподаватели</h2>
-                <p>Профессионалы, которые создают атмосферу доверия и вдохновения</p>
+                <h2>Наші викладачі</h2>
+                <p>Професіонали, які створюють атмосферу довіри і натхнення</p>
             </div>
             <div class="teachers-grid">
                 <div class="teacher-card">
                     <div class="teacher-img">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Валерия">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Валерія">
                         <div class="teacher-social">
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
                             <a href="https://www.instagram.com/mooneng.school/"><i class="fab fa-instagram"></i></a>
@@ -1804,8 +1830,8 @@
                         </div>
                     </div>
                     <div class="teacher-info">
-                        <h3>Валерия</h3>
-                        <p>Основатель школы, эксперт по коммуникации</p>
+                        <h3>Валерія</h3>
+                        <p>Засновниця школи, експерт з комунікації</p>
                         <div class="teacher-rating">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -1813,13 +1839,13 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p class="bio">"Моя цель - чтобы каждый студент почувствовал радость от свободного общения. Английский - это не барьер, а мост к новым возможностям."</p>
-                        <a href="#contact" class="btn" style="width: 100%; text-align: center;">Записаться к Валерии</a>
+                        <p class="bio">"Моя мета - щоб кожен студент відчув радість вільного спілкування. Англійська - це не бар'єр, а міст до нових можливостей."</p>
+                        <a href="#contact" class="btn" style="width: 100%; text-align: center;">Записатись до Валерії</a>
                     </div>
                 </div>
                 <div class="teacher-card">
                     <div class="teacher-img">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Анастасия">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Анастасія">
                         <div class="teacher-social">
                             <a href="#"><i class="fab fa-linkedin-in"></i></a>
                             <a href="#"><i class="fab fa-instagram"></i></a>
@@ -1827,8 +1853,8 @@
                         </div>
                     </div>
                     <div class="teacher-info">
-                        <h3>Анастасия</h3>
-                        <p>Специалист по подготовке к экзаменам</p>
+                        <h3>Анастасія</h3>
+                        <p>Спеціаліст з підготовки до іспитів</p>
                         <div class="teacher-rating">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -1836,8 +1862,8 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star-half-alt"></i>
                         </div>
-                        <p class="bio">"Экзамены - это не страшно, когда знаешь как к ним готовиться. Я научу вас стратегиям, которые действительно работают."</p>
-                        <a href="#contact" class="btn" style="width: 100%; text-align: center;">Записаться к Анастасии</a>
+                        <p class="bio">"Іспити - це не страшно, коли знаєш як до них готуватись. Я навчу вас стратегіям, які дійсно працюють."</p>
+                        <a href="#contact" class="btn" style="width: 100%; text-align: center;">Записатись до Анастасії</a>
                     </div>
                 </div>
             </div>
@@ -1848,19 +1874,19 @@
     <section class="section testimonials" id="reviews">
         <div class="container">
             <div class="section-title">
-                <h2>Истории наших студентов</h2>
-                <p>Как изменилась их жизнь после нашего курса</p>
+                <h2>Історії наших студентів</h2>
+                <p>Як змінилося їхнє життя після нашого курсу</p>
             </div>
             <div class="testimonials-slider">
                 <div class="testimonial-item">
                     <div class="testimonial-text">
-                        <p>Я всегда боялась говорить на английском, пока не пришла в Moon English School. Здесь такая теплая атмосфера, что страх ушел сам собой. Через 3 месяца я поехала в отпуск одна и впервые в жизни свободно общалась с людьми! Это невероятное чувство.</p>
+                        <p>Я завжди боялася говорити англійською, поки не прийшла до Moon English School. Тут така тепла атмосфера, що страх пішов сам собою. Через 3 місяці я поїхала у відпустку сама і вперше у житті вільно спілкувалася з людьми! Це неймовірне відчуття.</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Анна Ковалева">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Анна Ковальова">
                         <div class="author-info">
-                            <h4>Анна Ковалева</h4>
-                            <p>Прошла курс "Английский для жизни"</p>
+                            <h4>Анна Ковальова</h4>
+                            <p>Пройшла курс "Англійська для життя"</p>
                         </div>
                     </div>
                 </div>
@@ -1872,8 +1898,8 @@
     <section class="section faq-section">
         <div class="container">
             <div class="section-title">
-                <h2>Часто задаваемые вопросы</h2>
-                <p>Ответы на самые популярные вопросы</p>
+                <h2>Часті запитання</h2>
+                <p>Відповіді на найпопулярніші запитання</p>
             </div>
             
             <div class="faq-container">
@@ -1943,9 +1969,9 @@
     <!-- CTA Section -->
     <section class="cta">
         <div class="container">
-            <h2>Готовы начать с удовольствием?</h2>
-            <p>Запишитесь на бесплатный пробный урок и почувствуйте, каким может быть обучение без стресса</p>
-            <a href="#contact" class="btn btn-green">Записаться на бесплатный урок</a>
+            <h2>Готові почати із задоволенням?</h2>
+            <p>Запишіться на безкоштовний пробний урок і відчуйте, яким може бути навчання без стресу</p>
+            <a href="#contact" class="btn btn-green">Записатись на безкоштовний урок</a>
         </div>
     </section>
 
@@ -1953,12 +1979,12 @@
     <section class="section" id="contact">
         <div class="container">
             <div class="section-title">
-                <h2>Свяжитесь с нами</h2>
-                <p>Мы с радостью ответим на все ваши вопросы</p>
+                <h2>Зв'яжіться з нами</h2>
+                <p>Ми із задоволенням відповімо на всі ваші запитання</p>
             </div>
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3>Наши контакты</h3>
+                    <h3>Наші контакти</h3>
                     <div class="contact-details">
                         <div class="contact-item">
                             <div class="contact-icon">
@@ -1979,7 +2005,7 @@
                             </div>
                         </div>
                     </div>
-                    <h3>Мы в соцсетях</h3>
+                    <h3>Ми в соцмережах</h3>
                     <div class="social-links">
                         <a href="https://www.instagram.com/mooneng.school/"><i class="fab fa-instagram"></i></a>
                         <a href="https://t.me/moonlerr"><i class="fab fa-telegram"></i></a>
@@ -1988,7 +2014,7 @@
                 <div class="contact-form">
                     <form id="contactForm">
                         <div class="form-group">
-                            <label for="name">Ваше имя*</label>
+                            <label for="name">Ваше ім'я*</label>
                             <input type="text" id="name" name="name" required>
                         </div>
                         <div class="form-group">
@@ -2000,25 +2026,25 @@
                             <input type="tel" id="phone" name="phone">
                         </div>
                         <div class="form-group">
-                            <label for="program">Интересующая программа</label>
+                            <label for="program">Цікавить програма</label>
                             <select id="program" name="program">
-                                <option value="">Выберите программу</option>
-                                <option value="communication">Английский для жизни</option>
-                                <option value="business">Английский для работы</option>
-                                <option value="ielts">Подготовка к экзаменам</option>
-                                <option value="individual">Индивидуальные занятия</option>
-                                <option value="notsure">Не знаю, нужна консультация</option>
+                                <option value="">Оберіть програму</option>
+                                <option value="communication">Англійська для життя</option>
+                                <option value="business">Англійська для роботи</option>
+                                <option value="ielts">Підготовка до іспитів</option>
+                                <option value="individual">Індивідуальні заняття</option>
+                                <option value="notsure">Не знаю, потрібна консультація</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="message">Ваше сообщение</label>
+                            <label for="message">Ваше повідомлення</label>
                             <textarea id="message" name="message"></textarea>
                         </div>
                         <div class="form-group trial-checkbox">
                             <input type="checkbox" id="isTrial" name="isTrial" checked>
-                            <label for="isTrial">Это пробное занятие (бесплатно)</label>
+                            <label for="isTrial">Це пробне заняття (безкоштовно)</label>
                         </div>
-                        <button type="submit" class="btn">Отправить заявку</button>
+                        <button type="submit" class="btn">Надіслати заявку</button>
                     </form>
                 </div>
             </div>
@@ -2030,35 +2056,35 @@
         <div class="container">
             <div class="footer-container">
                 <div class="footer-col">
-                    <h3>Moon English School</h3>
-                    <p>Школа английского языка, где обучение становится удовольствием, а результаты - неизбежны.</p>
+                    <h3>.mooneng.school</h3>
+                    <p>Школа англійської мови, де навчання стає задоволенням, а результати - неминучі.</p>
                     <div class="social-links">
                         <a href="https://www.instagram.com/mooneng.school/"><i class="fab fa-instagram"></i></a>
                         <a href="https://t.me/moonlerr"><i class="fab fa-telegram"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h3>Программы</h3>
+                    <h3>Програми</h3>
                     <ul class="footer-links">
-                        <li><a href="#programs">Английский для жизни</a></li>
-                        <li><a href="#programs">Английский для работы</a></li>
-                        <li><a href="#programs">Подготовка к экзаменам</a></li>
-                        <li><a href="#programs">Индивидуальные занятия</a></li>
+                        <li><a href="#programs">Англійська для життя</a></li>
+                        <li><a href="#programs">Англійська для роботи</a></li>
+                        <li><a href="#programs">Підготовка до іспитів</a></li>
+                        <li><a href="#programs">Індивідуальні заняття</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Навигация</h3>
+                    <h3>Навігація</h3>
                     <ul class="footer-links">
-                        <li><a href="#home">Главная</a></li>
-                        <li><a href="#about">О нас</a></li>
+                        <li><a href="#home">Головна</a></li>
+                        <li><a href="#about">Про нас</a></li>
                         <li><a href="#method">Методика</a></li>
-                        <li><a href="#teachers">Преподаватели</a></li>
-                        <li><a href="#reviews">Отзывы</a></li>
-                        <li><a href="#contact">Контакты</a></li>
+                        <li><a href="#teachers">Викладачі</a></li>
+                        <li><a href="#reviews">Відгуки</a></li>
+                        <li><a href="#contact">Контакти</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h3>Контакты</h3>
+                    <h3>Контакти</h3>
                     <ul class="footer-links">
                         <li><a href="tel:+14376603208">+1 (437) 660-3208</a></li>
                         <li><a href="mailto:ismartsdn4371@gmail.com">ismartsdn4371@gmail.com</a></li>
@@ -2070,7 +2096,7 @@
         </div>
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2023 Moon English School. Все права защищены. <a href="#" style="color: var(--accent-pink);">Политика конфиденциальности</a></p>
+                <p>&copy; 2023 .mooneng.school. Всі права захищені. <a href="#" style="color: var(--accent-pink);">Політика конфіденційності</a></p>
             </div>
         </div>
     </footer>
@@ -2079,10 +2105,10 @@
     <div class="modal" id="successModal">
         <div class="modal-content">
             <span class="close-modal" id="closeModal">&times;</span>
-            <h2>Спасибо за вашу заявку!</h2>
-            <p>Наш менеджер свяжется с вами в течение 15 минут, чтобы обсудить детали и подобрать оптимальную программу обучения.</p>
-            <p>А пока вы можете скачать наш <strong>бесплатный гайд "Как учить английский с удовольствием"</strong>, который мы отправили на вашу почту.</p>
-            <a href="#" class="btn" style="margin-top: 20px; display: inline-block;">Хорошо, жду звонка</a>
+            <h2>Дякуємо за вашу заявку!</h2>
+            <p>Наш менеджер зв'яжеться з вами протягом 15 хвилин, щоб обговорити деталі та підібрати оптимальну програму навчання.</p>
+            <p>А поки ви можете завантажити наш <strong>безкоштовний гайд "Як вчити англійську із задоволенням"</strong>, який ми відправили на вашу пошту.</p>
+            <a href="#" class="btn" style="margin-top: 20px; display: inline-block;">Добре, чекаю дзвінка</a>
         </div>
     </div>
 
@@ -2210,7 +2236,7 @@
                 
                 if (timeLeft < 0) {
                     clearInterval(countdownInterval);
-                    document.getElementById('bannerText').textContent = "✨ Мы подготовили для вас специальное предложение! ✨";
+                    document.getElementById('bannerText').textContent = "✨ Ми підготували для вас спеціальну пропозицію! ✨";
                 }
             };
             
@@ -2275,7 +2301,7 @@
         function updatePrice() {
             const activeTeacher = document.querySelector('.teacher-select.active');
             const price = activeTeacher.dataset[`price${selectedLessons}`];
-            priceDisplay.textContent = `$${price}`;
+            priceDisplay.textContent = `${price} грн`;
         }
         
         // FAQ accordion
