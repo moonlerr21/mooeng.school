@@ -3,332 +3,275 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoonEng School - Англійська, що надихає</title>
+    <title>mooneng.school - англійська, що надихає</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #FF9E44;
-            --primary-light: #FFB46F;
-            --secondary: #6C63FF;
-            --accent: #FF6584;
-            --text: #2D2B4E;
-            --text-light: #6C6B80;
-            --background: #FFFFFF;
-            --background-alt: #F7F9FC;
-            --background-hero: linear-gradient(135deg, #FFF6EB 0%, #FEF8F1 100%);
-            --border-radius: 24px;
-            --border-radius-small: 12px;
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
-            --transition: all 0.3s ease;
+            --beige-primary: #F5F0E6;
+            --beige-light: #F9F7F2;
+            --beige-dark: #E8DFCE;
+            --olive-accent: #8A9A5B;
+            --olive-dark: #6B7F4D;
+            --text-dark: #2B273D;
+            --text-gray: #6E6B7B;
+            --pure-white: #FFFFFF;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
-
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: 'Manrope', sans-serif;
-            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            background-color: var(--beige-primary);
+            color: var(--text-dark);
             line-height: 1.6;
             overflow-x: hidden;
-            background-color: var(--background);
         }
-
-        h1, h2, h3, h4, h5 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            line-height: 1.3;
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--text-dark);
         }
-
+        
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
+        
         section {
-            padding: 80px 0;
+            padding: 100px 0;
         }
-
-        /* Шапка сайту */
+        
+        /* Header */
         header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 20px 0;
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 1000;
-            transition: var(--transition);
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        header.scrolled {
+            background: rgba(245, 240, 230, 0.98);
             padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(8px);
+            transition: var(--transition);
+            border-bottom: 1px solid rgba(43, 39, 61, 0.05);
         }
-
+        
+        header.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+        }
+        
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
+        
         .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--text);
-            text-decoration: none;
             display: flex;
             align-items: center;
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 22px;
+            color: var(--text-dark);
         }
-
+        
         .logo i {
-            color: var(--primary);
+            color: var(--olive-accent);
             margin-right: 8px;
-            font-size: 26px;
+            font-size: 24px;
         }
-
+        
         nav ul {
             display: flex;
             list-style: none;
-            gap: 30px;
+            align-items: center;
         }
-
-        nav a {
-            text-decoration: none;
-            color: var(--text);
-            font-weight: 500;
-            transition: var(--transition);
+        
+        nav ul li {
+            margin-left: 25px;
             position: relative;
         }
-
-        nav a:after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary);
+        
+        nav ul li a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
             transition: var(--transition);
+            padding: 8px 0;
+            position: relative;
         }
-
-        nav a:hover {
-            color: var(--primary);
+        
+        nav ul li a:hover {
+            color: var(--olive-accent);
         }
-
-        nav a:hover:after {
-            width: 100%;
-        }
-
-        .cta-button {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 12px 28px;
-            border-radius: 50px;
+        
+        .nav-btn {
+            display: inline-block;
+            background: var(--olive-accent);
+            color: var(--pure-white);
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
             font-weight: 600;
-            font-size: 16px;
-            cursor: pointer;
             transition: var(--transition);
-            box-shadow: 0 4px 20px rgba(255, 158, 68, 0.4);
-            animation: pulse 2s infinite;
+            font-size: 15px;
+            margin-left: 15px;
+            box-shadow: 0 4px 15px rgba(138, 154, 91, 0.3);
         }
-
-        .cta-button:hover {
-            background: var(--primary-light);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 158, 68, 0.5);
+        
+        .nav-btn:hover {
+            background: var(--olive-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(138, 154, 91, 0.4);
         }
-
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 4px 20px rgba(255, 158, 68, 0.4);
-            }
-            50% {
-                box-shadow: 0 4px 30px rgba(255, 158, 68, 0.6);
-            }
-            100% {
-                box-shadow: 0 4px 20px rgba(255, 158, 68, 0.4);
-            }
-        }
-
+        
         .mobile-menu-btn {
             display: none;
             background: none;
             border: none;
+            color: var(--text-dark);
             font-size: 24px;
             cursor: pointer;
-            color: var(--text);
+            transition: var(--transition);
         }
-
+        
+        .mobile-menu-btn:hover {
+            color: var(--olive-accent);
+        }
+        
         /* Hero Section */
         .hero {
-            padding: 160px 0 100px;
-            background: var(--background-hero);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -200px;
-            right: -200px;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(255, 158, 68, 0.15) 0%, rgba(255, 158, 68, 0) 70%);
-            border-radius: 50%;
-            z-index: 0;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -100px;
-            left: -100px;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(108, 99, 255, 0.1) 0%, rgba(108, 99, 255, 0) 70%);
-            border-radius: 50%;
-            z-index: 0;
-        }
-
-        .hero-content {
+            background: linear-gradient(135deg, rgba(245, 240, 230, 0.9), rgba(245, 240, 230, 0.9)), 
+                        url('https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80') no-repeat center center/cover;
+            height: 100vh;
+            min-height: 700px;
             display: flex;
             align-items: center;
+            text-align: left;
+            padding-top: 80px;
             position: relative;
-            z-index: 2;
         }
-
-        .hero-text {
-            flex: 1;
-            padding-right: 40px;
+        
+        .hero-content {
+            max-width: 600px;
         }
-
-        .hero-text h1 {
-            font-size: 3.5rem;
+        
+        .hero h1 {
+            font-size: 52px;
             margin-bottom: 20px;
-            color: var(--text);
+            line-height: 1.2;
+            animation: fadeInUp 0.8s ease;
         }
-
-        .hero-text p {
-            font-size: 1.2rem;
-            color: var(--text-light);
+        
+        .hero p {
+            font-size: 18px;
             margin-bottom: 30px;
+            color: var(--text-gray);
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            opacity: 0;
         }
-
+        
         .hero-buttons {
             display: flex;
             gap: 15px;
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+            opacity: 0;
         }
-
-        .primary-btn {
-            background: var(--primary);
-            color: white;
+        
+        .btn {
+            display: inline-block;
+            background: var(--olive-accent);
+            color: var(--pure-white);
+            padding: 14px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
             border: none;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 16px;
             cursor: pointer;
-            transition: var(--transition);
-            box-shadow: 0 4px 20px rgba(255, 158, 68, 0.4);
+            font-size: 16px;
+            box-shadow: 0 4px 15px rgba(138, 154, 91, 0.3);
         }
-
-        .primary-btn:hover {
-            background: var(--primary-light);
+        
+        .btn:hover {
+            background: var(--olive-dark);
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 158, 68, 0.5);
+            box-shadow: 0 6px 20px rgba(138, 154, 91, 0.4);
         }
-
-        .secondary-btn {
+        
+        .btn-outline {
             background: transparent;
-            color: var(--text);
-            border: 2px solid var(--primary);
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 16px;
+            border: 2px solid var(--olive-accent);
+            color: var(--olive-accent);
+            box-shadow: none;
+        }
+        
+        .btn-outline:hover {
+            background: rgba(138, 154, 91, 0.1);
+        }
+        
+        .hero-scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            color: var(--olive-accent);
+            font-size: 24px;
+            animation: bounce 2s infinite;
             cursor: pointer;
             transition: var(--transition);
         }
-
-        .secondary-btn:hover {
-            background: rgba(255, 158, 68, 0.1);
-            transform: translateY(-3px);
+        
+        .hero-scroll-down:hover {
+            color: var(--text-dark);
         }
-
-        .hero-image {
-            flex: 1;
-            position: relative;
-        }
-
-        .hero-image img {
-            width: 100%;
-            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            box-shadow: var(--shadow);
-            animation: morphing 10s infinite ease-in-out;
-        }
-
-        @keyframes morphing {
-            0% {
-                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            }
-            25% {
-                border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
-            }
-            50% {
-                border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
-            }
-            75% {
-                border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
-            }
-            100% {
-                border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-            }
-        }
-
-        /* Блок з цифрами */
-        .stats {
-            background-color: var(--background-alt);
-            text-align: center;
+        
+        /* Counter Section */
+        .counter-section {
+            background: linear-gradient(135deg, var(--olive-accent), var(--olive-dark));
+            color: var(--pure-white);
             padding: 60px 0;
+            margin-top: -1px;
         }
-
-        .stats-container {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+        
+        .counter-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
+            text-align: center;
         }
-
-        .stat-item {
-            flex: 1;
-            min-width: 200px;
+        
+        .counter-item {
+            padding: 20px;
         }
-
-        .stat-number {
-            font-size: 3rem;
+        
+        .counter-number {
+            font-size: 48px;
             font-weight: 700;
-            color: var(--primary);
             margin-bottom: 10px;
+            font-family: 'Playfair Display', serif;
+            color: var(--pure-white);
         }
-
-        .stat-label {
-            font-size: 1.1rem;
-            color: var(--text-light);
+        
+        .counter-text {
+            font-size: 16px;
+            opacity: 0.9;
         }
-
+        
         .flags-container {
             display: flex;
             justify-content: center;
@@ -336,7 +279,7 @@
             gap: 15px;
             margin-top: 40px;
         }
-
+        
         .flag {
             width: 50px;
             height: 35px;
@@ -344,577 +287,900 @@
             overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
         }
-
+        
         .flag:hover {
             transform: translateY(-5px);
         }
-
-        /* Блок "Англійська, що надихає" */
-        .values {
-            text-align: center;
-        }
-
+        
+        /* Values Section */
         .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
             position: relative;
             display: inline-block;
         }
-
-        .section-title::after {
+        
+        .section-title h2:after {
             content: '';
             position: absolute;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, var(--olive-accent), var(--olive-dark));
             bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
-            background: var(--primary);
-            border-radius: 2px;
+            border-radius: 3px;
         }
-
-        .section-subtitle {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            margin-bottom: 60px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+        
+        .section-title p {
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 16px;
         }
-
-        .values-grid {
+        
+        .values-content {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 50px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .values-content p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+        }
+        
+        .values-content p:first-letter {
+            font-size: 24px;
+            color: var(--olive-accent);
+            font-weight: bold;
+        }
+        
+        /* Approach Section */
+        .approach-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 30px;
-            margin-top: 50px;
         }
-
-        .value-card {
-            background: white;
+        
+        .approach-item {
+            background: var(--pure-white);
+            border-radius: 12px;
             padding: 30px;
-            border-radius: var(--border-radius);
             box-shadow: var(--shadow);
             transition: var(--transition);
-            text-align: left;
-            position: relative;
-            overflow: hidden;
+            border: 1px solid rgba(43, 39, 61, 0.05);
         }
-
-        .value-card:hover {
-            transform: translateY(-10px);
+        
+        .approach-item:hover {
+            transform: translateY(-5px);
             box-shadow: var(--shadow-hover);
+            border-color: var(--olive-accent);
         }
-
-        .value-icon {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-
-        .value-title {
-            font-size: 1.5rem;
+        
+        .approach-item h3 {
+            font-size: 20px;
             margin-bottom: 15px;
+            display: flex;
+            align-items: center;
         }
-
-        .value-desc {
-            color: var(--text-light);
+        
+        .approach-item h3 i {
+            margin-right: 10px;
+            color: var(--olive-accent);
         }
-
-        /* Блок "Наші програми" */
-        .programs {
-            background-color: var(--background-alt);
+        
+        .approach-item p {
+            color: var(--text-gray);
+            font-size: 15px;
         }
-
+        
+        /* Programs Section */
         .programs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
-            margin-top: 50px;
         }
-
+        
         .program-card {
-            background: white;
-            padding: 30px;
-            border-radius: var(--border-radius);
+            background: var(--pure-white);
+            border-radius: 12px;
+            overflow: hidden;
             box-shadow: var(--shadow);
             transition: var(--transition);
-            text-align: center;
+            border: 1px solid rgba(43, 39, 61, 0.05);
+            position: relative;
         }
-
+        
         .program-card:hover {
             transform: translateY(-10px);
             box-shadow: var(--shadow-hover);
+            border-color: var(--olive-accent);
         }
-
-        .program-icon {
-            font-size: 2.5rem;
-            color: var(--secondary);
-            margin-bottom: 20px;
+        
+        .program-img {
+            height: 180px;
+            overflow: hidden;
+            position: relative;
         }
-
-        .program-title {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+        
+        .program-img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.4));
+            z-index: 1;
         }
-
-        .program-desc {
-            color: var(--text-light);
-            margin-bottom: 20px;
-        }
-
-        .program-price {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin: 20px 0;
-        }
-
-        /* Блок "Ваші результати" */
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .result-card {
-            text-align: center;
-            padding: 30px;
-            border-radius: var(--border-radius);
-            background: white;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-
-        .result-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .result-icon {
-            font-size: 3rem;
-            color: var(--accent);
-            margin-bottom: 20px;
-        }
-
-        /* Блок викладачів */
-        .teachers {
-            background-color: var(--background-alt);
-        }
-
-        .teachers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .teacher-card {
-            background: white;
-            padding: 30px;
-            border-radius: var(--border-radius);
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            text-align: center;
-        }
-
-        .teacher-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-hover);
-        }
-
-        .teacher-image {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
+        
+        .program-img img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            margin: 0 auto 20px;
-            border: 5px solid var(--background-alt);
-            box-shadow: var(--shadow);
+            transition: var(--transition);
         }
-
-        .teacher-name {
-            font-size: 1.5rem;
+        
+        .program-card:hover .program-img img {
+            transform: scale(1.05);
+        }
+        
+        .program-content {
+            padding: 25px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .program-content h3 {
+            font-size: 20px;
             margin-bottom: 10px;
         }
-
-        .teacher-bio {
-            color: var(--text-light);
+        
+        .program-content p {
+            color: var(--text-gray);
+            font-size: 14px;
             margin-bottom: 20px;
         }
-
-        /* Відгуки */
+        
+        /* Pricing Section */
+        .pricing-container {
+            background: var(--pure-white);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: var(--shadow);
+        }
+        
+        .pricing-options {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .pricing-option {
+            background: var(--beige-light);
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        .pricing-option.active {
+            background: var(--olive-accent);
+            color: var(--pure-white);
+        }
+        
+        .teacher-selection {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .teacher-select {
+            background: var(--beige-light);
+            border-radius: 8px;
+            padding: 15px;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .teacher-select.active {
+            background: var(--olive-accent);
+            color: var(--pure-white);
+        }
+        
+        .teacher-select img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .teacher-select h4 {
+            font-size: 14px;
+            margin-bottom: 2px;
+        }
+        
+        .teacher-select p {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+        
+        .lesson-options {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .price-display {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .price-display .price {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--olive-accent);
+            margin-bottom: 20px;
+        }
+        
+        .price-display .price-details {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 20px;
+        }
+        
+        .trial-checkbox {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            gap: 10px;
+        }
+        
+        .trial-checkbox input {
+            accent-color: var(--olive-accent);
+        }
+        
+        /* Testimonials Section */
         .testimonials-slider {
-            position: relative;
             max-width: 800px;
-            margin: 50px auto 0;
+            margin: 0 auto;
+            position: relative;
             overflow: hidden;
         }
-
-        .testimonials {
+        
+        .testimonials-track {
             display: flex;
             transition: transform 0.5s ease;
         }
-
-        .testimonial {
-            min-width: 100%;
+        
+        .testimonial-item {
+            background: var(--pure-white);
+            border-radius: 12px;
             padding: 30px;
-            background: white;
-            border-radius: var(--border-radius);
             box-shadow: var(--shadow);
+            min-width: 100%;
             text-align: center;
+            border: 1px solid rgba(43, 39, 61, 0.05);
         }
-
-        .testimonial-image {
-            width: 80px;
-            height: 80px;
+        
+        .testimonial-text {
+            font-size: 16px;
+            font-style: italic;
+            margin-bottom: 25px;
+            color: var(--text-dark);
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .testimonial-author img {
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 0 auto 20px;
-            border: 3px solid var(--primary-light);
+            margin-right: 15px;
+            border: 2px solid var(--olive-accent);
         }
-
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-            color: var(--text);
+        
+        .author-info h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            text-align: left;
         }
-
-        .testimonial-author {
-            font-weight: 600;
+        
+        .author-info p {
+            font-size: 14px;
+            text-align: left;
+            color: var(--text-gray);
         }
-
-        .testimonial-age {
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        .slider-controls {
+        
+        .slider-nav {
             display: flex;
             justify-content: center;
-            margin-top: 30px;
             gap: 10px;
+            margin-top: 30px;
         }
-
+        
         .slider-dot {
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
-            background: #ddd;
+            background: var(--beige-light);
             cursor: pointer;
             transition: var(--transition);
         }
-
+        
         .slider-dot.active {
-            background: var(--primary);
+            background: var(--olive-accent);
             transform: scale(1.2);
         }
-
-        /* FAQ */
-        .faq {
-            background-color: var(--background-alt);
-        }
-
+        
+        /* FAQ Section */
         .faq-container {
             max-width: 800px;
-            margin: 50px auto 0;
+            margin: 0 auto;
         }
-
+        
         .faq-item {
-            margin-bottom: 20px;
-            border-radius: var(--border-radius-small);
+            margin-bottom: 15px;
+            border: 1px solid rgba(43, 39, 61, 0.05);
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: var(--shadow);
-            background: white;
+            transition: var(--transition);
         }
-
+        
+        .faq-item:hover {
+            border-color: var(--olive-accent);
+        }
+        
         .faq-question {
-            padding: 20px;
+            padding: 18px;
+            background: var(--pure-white);
             cursor: pointer;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            font-weight: 600;
-            transition: var(--transition);
+            font-weight: 500;
         }
-
-        .faq-question:hover {
-            background: rgba(255, 158, 68, 0.05);
-        }
-
+        
         .faq-question i {
             transition: var(--transition);
         }
-
-        .faq-answer {
-            padding: 0 20px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-            color: var(--text-light);
-        }
-
+        
         .faq-item.active .faq-question i {
             transform: rotate(180deg);
         }
-
+        
+        .faq-answer {
+            padding: 0 18px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: var(--beige-light);
+            font-size: 14px;
+        }
+        
         .faq-item.active .faq-answer {
-            max-height: 200px;
-            padding: 0 20px 20px;
+            padding: 18px;
+            max-height: 500px;
         }
-
-        /* Футер */
-        footer {
-            background: var(--text);
-            color: white;
-            padding: 60px 0 30px;
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--olive-accent), var(--olive-dark));
+            color: var(--pure-white);
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
         }
-
-        .footer-container {
+        
+        .cta h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+        
+        /* Contact Section */
+        .contact-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: 1fr 1fr;
             gap: 40px;
         }
-
-        .footer-logo {
-            font-family: 'Montserrat', sans-serif;
+        
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        
+        .contact-info h3 {
             font-size: 24px;
-            font-weight: 700;
             margin-bottom: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--olive-accent);
+            border-radius: 50%;
             display: flex;
             align-items: center;
+            justify-content: center;
+            color: var(--pure-white);
+            font-size: 18px;
+            margin-right: 15px;
+            flex-shrink: 0;
         }
-
-        .footer-logo i {
-            color: var(--primary);
-            margin-right: 8px;
-            font-size: 26px;
+        
+        .contact-text h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
         }
-
-        .footer-desc {
-            margin-bottom: 20px;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .footer-heading {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .footer-heading::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 3px;
-            background: var(--primary);
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, 0.7);
+        
+        .contact-text p, 
+        .contact-text a {
+            color: var(--text-gray);
             text-decoration: none;
             transition: var(--transition);
+            font-size: 14px;
         }
-
-        .footer-links a:hover {
-            color: var(--primary);
-            padding-left: 5px;
+        
+        .contact-text a:hover {
+            color: var(--olive-accent);
         }
-
-        .contact-info {
-            list-style: none;
-        }
-
-        .contact-info li {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .contact-info i {
-            margin-right: 10px;
-            color: var(--primary);
-            font-size: 18px;
-            width: 20px;
-        }
-
+        
         .social-links {
             display: flex;
-            gap: 15px;
+            gap: 10px;
             margin-top: 20px;
         }
-
+        
         .social-links a {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 40px;
             height: 40px;
+            background: var(--beige-light);
+            color: var(--olive-accent);
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
             transition: var(--transition);
+            font-size: 18px;
         }
-
+        
         .social-links a:hover {
-            background: var(--primary);
+            background: var(--olive-accent);
+            color: var(--pure-white);
             transform: translateY(-3px);
         }
-
-        .copyright {
+        
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid rgba(43, 39, 61, 0.1);
+            border-radius: 8px;
+            font-size: 14px;
+            transition: var(--transition);
+            font-family: 'Inter', sans-serif;
+            background: var(--pure-white);
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            border-color: var(--olive-accent);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(138, 154, 91, 0.2);
+        }
+        
+        .contact-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--pure-white);
+            padding: 80px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-col h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-col h3:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 30px;
+            height: 2px;
+            background: var(--olive-accent);
+        }
+        
+        .footer-col p {
+            margin-bottom: 15px;
+            opacity: 0.8;
+            font-size: 14px;
+        }
+        
+        .footer-links li {
+            margin-bottom: 12px;
+            list-style: none;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 14px;
+        }
+        
+        .footer-links a:hover {
+            color: var(--olive-accent);
+            padding-left: 5px;
+        }
+        
+        .footer-bottom {
             text-align: center;
-            margin-top: 50px;
-            padding-top: 20px;
+            padding-top: 30px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.5);
         }
-
-        /* Анімації */
-        .animate-on-scroll {
+        
+        .footer-bottom p {
+            opacity: 0.8;
+            font-size: 13px;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+            transition: opacity 0.3s ease;
         }
-
-        .is-visible {
+        
+        .modal.active {
+            display: flex;
             opacity: 1;
+        }
+        
+        .modal-content {
+            background: var(--pure-white);
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
+            padding: 30px;
+            position: relative;
+            transform: translateY(30px);
+            transition: transform 0.3s ease;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .modal.active .modal-content {
             transform: translateY(0);
         }
-
-        /* Адаптивність */
+        
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            color: var(--text-gray);
+            transition: var(--transition);
+        }
+        
+        .close-modal:hover {
+            color: var(--olive-accent);
+            transform: rotate(90deg);
+        }
+        
+        .modal h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+        
+        .modal p {
+            margin-bottom: 20px;
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+        
+        /* Responsive */
         @media (max-width: 992px) {
-            .hero-content {
-                flex-direction: column;
-                text-align: center;
+            .hero h1 {
+                font-size: 42px;
             }
             
-            .hero-text {
-                padding-right: 0;
-                margin-bottom: 40px;
+            .approach-grid {
+                grid-template-columns: 1fr;
             }
             
-            .hero-buttons {
-                justify-content: center;
+            .programs-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
             
-            .hero-text h1 {
-                font-size: 2.8rem;
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .footer-container {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
-
+        
         @media (max-width: 768px) {
             nav ul {
-                display: none;
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: var(--pure-white);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 40px;
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            nav ul.active {
+                left: 0;
+            }
+            
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .nav-btn {
+                margin-left: 0;
+                margin-top: 15px;
             }
             
             .mobile-menu-btn {
                 display: block;
             }
             
-            .hero-text h1 {
-                font-size: 2.2rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .stat-number {
-                font-size: 2.5rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .hero-buttons {
-                flex-direction: column;
-            }
-            
             .hero {
-                padding: 130px 0 80px;
+                min-height: 600px;
+                text-align: center;
+            }
+            
+            .hero-content {
+                margin: 0 auto;
+                text-align: center;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
             }
             
             section {
-                padding: 60px 0;
+                padding: 70px 0;
             }
             
-            .value-card, .program-card, .teacher-card, .testimonial {
-                padding: 20px;
+            .section-title h2 {
+                font-size: 32px;
             }
+            
+            .values-content {
+                padding: 30px;
+            }
+            
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-container {
+                padding: 30px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 30px;
+            }
+            
+            .counter-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0) translateX(-50%);
+            }
+            40% {
+                transform: translateY(-15px) translateX(-50%);
+            }
+            60% {
+                transform: translateY(-7px) translateX(-50%);
+            }
+        }
+        
+        /* Collapsible elements */
+        .collapsible {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .collapsible.active {
+            max-height: 500px;
+        }
+        
+        .toggle-btn {
+            background: var(--olive-accent);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .toggle-btn i {
+            transition: var(--transition);
+        }
+        
+        .toggle-btn.active i {
+            transform: rotate(180deg);
         }
     </style>
 </head>
 <body>
-    <!-- Шапка сайту -->
+    <!-- Header -->
     <header id="header">
         <div class="container header-container">
-            <a href="#" class="logo">
+            <a href="#home" class="logo">
                 <i class="fas fa-moon"></i>
-                .mooneng
+                .mooneng.school
             </a>
-            
             <nav>
-                <ul>
-                    <li><a href="#about">Про нас</a></li>
-                    <li><a href="#method">Методика</a></li>
-                    <li><a href="#programs">Програми</a></li>
-                    <li><a href="#reviews">Відгуки</a></li>
-                    <li><a href="#teachers">Викладачі</a></li>
+                <ul id="nav-menu">
+                    <li><a href="#about">про нас</a></li>
+                    <li><a href="#method">методика</a></li>
+                    <li><a href="#programs">програми</a></li>
+                    <li><a href="#reviews">відгуки</a></li>
+                    <li><a href="#teachers">викладачі</a></li>
+                    <li><a href="#contact" class="nav-btn">записатись на пробне</a></li>
                 </ul>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
             </nav>
-            
-            <button class="cta-button">Пробне заняття</button>
-            
-            <button class="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
-            </button>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <h1>Англійська, що надихає</h1>
-                <p>Онлайн-школа з індивідуальним підходом, де кожен знаходить свій шлях до свободи спілкування</p>
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>англійська, яка надихає</h1>
+                <p>навчання в атмосфері тепла і турботи</p>
                 <div class="hero-buttons">
-                    <button class="primary-btn">Обрати програму</button>
-                    <button class="secondary-btn">Пробний урок</button>
+                    <a href="#programs" class="btn">обрати програму</a>
+                    <a href="#contact" class="btn btn-outline">записатись на пробний</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&h=600&q=80" alt="Вивчення англійської мови">
-            </div>
+        </div>
+        <div class="hero-scroll-down" id="scrollDown">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
-    <!-- Блок з цифрами -->
-    <section class="stats">
+    <!-- Counter Section -->
+    <section class="counter-section">
         <div class="container">
-            <div class="stats-container">
-                <div class="stat-item">
-                    <div class="stat-number" data-count="50">0</div>
-                    <div class="stat-label">учнів довірили нам своє навчання</div>
+            <div class="counter-grid">
+                <div class="counter-item">
+                    <div class="counter-number" id="studentsCount">0</div>
+                    <div class="counter-text">задоволених студентів</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-count="300">0</div>
-                    <div class="stat-label">тем і матеріалів для навчання</div>
+                <div class="counter-item">
+                    <div class="counter-number" id="countriesCount">0</div>
+                    <div class="counter-text">країн, де говорять наші студенти</div>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number" data-count="98">0</div>
-                    <div class="stat-label">відсотків задоволених студентів</div>
+                <div class="counter-item">
+                    <div class="counter-number" id="materialsCount">0</div>
+                    <div class="counter-text">тем і матеріалів для вивчення</div>
                 </div>
             </div>
             
@@ -937,348 +1203,647 @@
         </div>
     </section>
 
-    <!-- Блок "Англійська, що надихає" -->
-    <section class="values">
+    <!-- About Section -->
+    <section class="section" id="about">
         <div class="container">
-            <h2 class="section-title">Англійська, що надихає</h2>
-            <p class="section-subtitle">Ми створили середовище, де кожен учень може розкрити свій потенціал та досягти успіху у вивченні мови</p>
-            
-            <div class="values-grid">
-                <div class="value-card animate-on-scroll">
-                    <div class="value-icon">
-                        <i class="fas fa-user-friends"></i>
-                    </div>
-                    <h3 class="value-title">Індивідуальний підхід</h3>
-                    <p class="value-desc">Кожна програма адаптується під ваші цілі, рівень та темп навчання</p>
+            <div class="section-title">
+                <h2>наші цінності</h2>
+                <p>🌙 англійська, яка надихає</p>
+            </div>
+            <div class="values-content">
+                <p>навчання має приносити радість. без стресу, зубріння та страху помилитись — тільки живе спілкування, підтримка та природне занурення в мову.</p>
+                <p>у нас англійська стає не обов'язком, а частиною життя. ви говорите з перших занять, росте у своєму ритмі і отримуєте задоволення від процесу.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Method Section -->
+    <section class="section" id="method">
+        <div class="container">
+            <div class="section-title">
+                <h2>наш підхід</h2>
+                <p>для тих, хто боїться говорити</p>
+            </div>
+            <div class="approach-grid">
+                <div class="approach-item">
+                    <h3><i class="fas fa-comment-dots"></i> подолаєш страх говорити вже з першого уроку</h3>
+                    <p>ми створюємо комфортну атмосферу, де помилки — це частина навчання</p>
                 </div>
-                
-                <div class="value-card animate-on-scroll">
-                    <div class="value-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h3 class="value-title">Розмовна практика</h3>
-                    <p class="value-desc">80% кожного заняття - це розмова англійською з носієм мови</p>
+                <div class="approach-item">
+                    <h3><i class="fas fa-chart-line"></i> максимум практики (80% розмови)</h3>
+                    <p>кожне заняття — це розмовна практика, як у реальному житті</p>
                 </div>
-                
-                <div class="value-card animate-on-scroll">
-                    <div class="value-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3 class="value-title">Комфортна атмосфера</h3>
-                    <p class="value-desc">Ми створили дружню атмосферу, де помилки - це частина навчання</p>
+                <div class="approach-item">
+                    <h3><i class="fas fa-user-graduate"></i> індивідуальна програма під твій темп і цілі</h3>
+                    <p>ми враховуємо ваші цілі, рівень та особливості сприйняття</p>
                 </div>
-                
-                <div class="value-card animate-on-scroll">
-                    <div class="value-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3 class="value-title">Сучасні методики</h3>
-                    <p class="value-desc">Використовуємо інтерактивні матеріали та актуальні теми для навчання</p>
+                <div class="approach-item">
+                    <h3><i class="fas fa-smile"></i> легка атмосфера, без тиску</h3>
+                    <p>навчання має приносити задоволення, а не стрес</p>
+                </div>
+                <div class="approach-item">
+                    <h3><i class="fas fa-microphone"></i> корекція вимови без стресу</h3>
+                    <p>допоможемо звучати природно і впевнено</p>
+                </div>
+                <div class="approach-item">
+                    <h3><i class="fas fa-book"></i> домашні завдання тільки для результату</h3>
+                    <p>ми даємо тільки те, що дійсно допоможе вам прогресувати</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Блок "Наші програми" -->
-    <section class="programs" id="programs">
+    <!-- Programs Section -->
+    <section class="section" id="programs">
         <div class="container">
-            <h2 class="section-title">Наші програми</h2>
-            <p class="section-subtitle">Оберіть формат навчання, який найкраще підходить для досягнення ваших цілей</p>
-            
+            <div class="section-title">
+                <h2>наші програми</h2>
+                <p>оберіть формат, який вам підходить</p>
+            </div>
             <div class="programs-grid">
-                <div class="program-card animate-on-scroll">
-                    <div class="program-icon">
-                        <i class="fas fa-user"></i>
+                <div class="program-card">
+                    <div class="program-img">
+                        <img src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Індивідуальні заняття">
                     </div>
-                    <h3 class="program-title">Індивідуальні заняття</h3>
-                    <p class="program-desc">Повна увага викладача, програма, побудована навколо ваших потреб</p>
-                    <div class="program-price">від 450 грн/заняття</div>
-                    <button class="primary-btn">Детальніше</button>
+                    <div class="program-content">
+                        <h3>індивідуальні</h3>
+                        <p>для будь-яких тем: побут, робота, навчання, вимова, подолання мовного бар'єру, словниковий запас</p>
+                        <a href="#pricing" class="btn" style="width: 100%; text-align: center; margin-top: 15px;">детальніше</a>
+                    </div>
                 </div>
-                
-                <div class="program-card animate-on-scroll">
-                    <div class="program-icon">
-                        <i class="fas fa-user-friends"></i>
+                <div class="program-card">
+                    <div class="program-img">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Парні уроки">
                     </div>
-                    <h3 class="program-title">Парні заняття</h3>
-                    <p class="program-desc">Навчання з другом або однодумцем за вигіднішою ціною</p>
-                    <div class="program-price">від 300 грн/заняття</div>
-                    <button class="primary-btn">Детальніше</button>
+                    <div class="program-content">
+                        <h3>парні уроки</h3>
+                        <p>ефективність + інтеракція, швидке покращення комунікації та слухання</p>
+                        <a href="#pricing" class="btn" style="width: 100%; text-align: center; margin-top: 15px;">детальніше</a>
+                    </div>
                 </div>
-                
-                <div class="program-card animate-on-scroll">
-                    <div class="program-icon">
-                        <i class="fas fa-users"></i>
+                <div class="program-card">
+                    <div class="program-img">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Групові заняття">
                     </div>
-                    <h3 class="program-title">Групові заняття</h3>
-                    <p class="program-desc">Невеликі групи до 6 осіб для тих, хто любить навчатися в команді</p>
-                    <div class="program-price">від 200 грн/заняття</div>
-                    <button class="primary-btn">Детальніше</button>
+                    <div class="program-content">
+                        <h3>групові та speaking clubs</h3>
+                        <p>для прокачки спілкування, активної взаємодії, підготовки до реальних ситуацій</p>
+                        <a href="#pricing" class="btn" style="width: 100%; text-align: center; margin-top: 15px;">детальніше</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Блок "Ваші результати" -->
-    <section class="results">
+    <!-- Pricing Section -->
+    <section class="section" id="pricing">
         <div class="container">
-            <h2 class="section-title">Ваші результати</h2>
-            <p class="section-subtitle">Після навчання в нашій школі ви зможете вільно спілкуватися англійською в різних ситуаціях</p>
-            
-            <div class="results-grid">
-                <div class="result-card animate-on-scroll">
-                    <div class="result-icon">
-                        <i class="fas fa-globe-americas"></i>
+            <div class="section-title">
+                <h2>ціни та викладачі</h2>
+                <p>оберіть свій ідеальний варіант</p>
+            </div>
+            <div class="pricing-container">
+                <button class="toggle-btn" id="pricingToggle">
+                    <span>показати варіанти</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                
+                <div class="collapsible" id="pricingOptions">
+                    <div class="pricing-options">
+                        <div class="pricing-option active" data-type="individual">індивідуальні</div>
+                        <div class="pricing-option" data-type="pair">парні (за двох)</div>
+                        <div class="pricing-option" data-type="group">групові</div>
                     </div>
-                    <h3>Подорожі</h3>
-                    <p>Легко спілкуватися в аеропортах, готелях та екскурсіях</p>
+                    
+                    <div class="teacher-selection">
+                        <div class="teacher-select active" data-teacher="valeria">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Валерія">
+                            <div>
+                                <h4>Валерія</h4>
+                                <p>засновниця школи</p>
+                            </div>
+                        </div>
+                        <div class="teacher-select" data-teacher="anastasia">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Анастасія">
+                            <div>
+                                <h4>Анастасія</h4>
+                                <p>викладач</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="lesson-options">
+                        <div class="pricing-option active" data-lessons="4">4 заняття</div>
+                        <div class="pricing-option" data-lessons="8">8 занять</div>
+                        <div class="pricing-option" data-lessons="12">12 занять</div>
+                    </div>
                 </div>
                 
-                <div class="result-card animate-on-scroll">
-                    <div class="result-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3>Робота</h3>
-                    <p>Проводити презентації, спілкуватися з клієнтами та колегами</p>
+                <div class="price-display">
+                    <div class="price">1100 грн</div>
+                    <div class="price-details">26 USD / 36 CAD</div>
+                    <a href="#contact" class="btn">придбати пакет</a>
                 </div>
                 
-                <div class="result-card animate-on-scroll">
-                    <div class="result-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Навчання</h3>
-                    <p>Готуватися до іспитів та навчання в закордонних університетах</p>
-                </div>
-                
-                <div class="result-card animate-on-scroll">
-                    <div class="result-icon">
-                        <i class="fas fa-film"></i>
-                    </div>
-                    <h3>Культура</h3>
-                    <p>Дивитися фільми та читати книги в оригіналі без субтитрів</p>
+                <div class="trial-checkbox">
+                    <input type="checkbox" id="trialLesson" checked>
+                    <label for="trialLesson">це пробне заняття</label>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Блок викладачів -->
-    <section class="teachers" id="teachers">
+    <!-- Testimonials Section -->
+    <section class="section" id="reviews">
         <div class="container">
-            <h2 class="section-title">Наші викладачі</h2>
-            <p class="section-subtitle">Професійні педагоги з міжнародними сертифікатами та багаторічним досвідом</p>
-            
-            <div class="teachers-grid">
-                <div class="teacher-card animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80" alt="Валерія" class="teacher-image">
-                    <h3 class="teacher-name">Валерія</h3>
-                    <p class="teacher-bio">Сертифікований викладач з CELTA, досвід роботи 7 років. Спеціалізується на бізнес-англійській та підготовці до міжнародних іспитів.</p>
-                    <button class="primary-btn">Записатись до Валерії</button>
-                </div>
-                
-                <div class="teacher-card animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80" alt="Анастасія" class="teacher-image">
-                    <h3 class="teacher-name">Анастасія</h3>
-                    <p class="teacher-bio">Магістр філології, досвід роботи 5 років. Працює з учнями різних рівнів, спеціалізується на розмовній практиці та англійській для подорожей.</p>
-                    <button class="primary-btn">Записатись до Анастасії</button>
-                </div>
+            <div class="section-title">
+                <h2>відгуки</h2>
+                <p>що кажуть наші студенти</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Відгуки -->
-    <section class="testimonials-section" id="reviews">
-        <div class="container">
-            <h2 class="section-title">Відгуки наших студентів</h2>
-            <p class="section-subtitle">Щиро ділимося успіхами та враженнями наших учнів</p>
-            
             <div class="testimonials-slider">
-                <div class="testimonials">
-                    <div class="testimonial">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&h=200&q=80" alt="Олександр" class="testimonial-image">
-                        <p class="testimonial-text">За 6 місяців навчання зробив великий прорив в англійській. Вже можу вільно спілкуватися з іноземними колегами по роботі. Дуже задоволений якістю навчання та індивідуальним підходом!</p>
-                        <div class="testimonial-author">Олександр, 32 роки</div>
-                        <div class="testimonial-age">Навчається 6 місяців</div>
+                <div class="testimonials-track" id="testimonialsTrack">
+                    <div class="testimonial-item">
+                        <div class="testimonial-text">
+                            <p>Я завжди боялася говорити англійською, поки не прийшла до Moon English School. Тут така тепла атмосфера, що страх пішов сам собою. Через 3 місяці я поїхала у відпустку сама і вперше у житті вільно спілкувалася з людьми!</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Анна">
+                            <div class="author-info">
+                                <h4>Анна</h4>
+                                <p>студентка, 3 місяці навчання</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-text">
+                            <p>Після року навчання я зміг пройти співбесіду англійською та отримати роботу в міжнародній компанії. Валерія не просто викладач, а справжній мотиватор!</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Олексій">
+                            <div class="author-info">
+                                <h4>Олексій</h4>
+                                <p>студент, 1 рік навчання</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="slider-controls">
+                <div class="slider-nav">
                     <div class="slider-dot active"></div>
                     <div class="slider-dot"></div>
-                    <div class="slider-dot"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq" id="faq">
+    <!-- FAQ Section -->
+    <section class="section">
         <div class="container">
-            <h2 class="section-title">Поширені запитання</h2>
-            <p class="section-subtitle">Ми відкриті до діалогу та готові відповісти на всі ваші запитання</p>
+            <div class="section-title">
+                <h2>часті запитання</h2>
+                <p>відповіді на ваші запитання</p>
+            </div>
             
             <div class="faq-container">
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Як довго триває один курс навчання?</span>
+                        <span>чи можна обрати зручний графік?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Тривалість курсу залежить від ваших цілей та обраної програми. Середній курс становить 3-6 місяців при інтенсивності 2-3 заняття на тиждень. Після досягнення бажаного рівня ви можете продовжити навчання для підтримки рівня або вивчення спеціалізованої лексики.</p>
+                        <p>так, працюємо 8:00-22:00, включно з вихідними. час для занять підбираємо зручний вам.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Чи можна змінити розклад занять?</span>
+                        <span>чи підійде, якщо я новачок?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Так, ми завжди йдемо назустріч нашим студентам. Ви можете обговорити зі своїм викладачем зручний для вас час занять і при необхідності перенести його за домовленістю за 24 години.</p>
+                        <p>так, є програми для новачків з фокусом на розмовну практику.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Чи є безкоштовний пробний урок?</span>
+                        <span>чи можна платити частинами?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Так, ми пропонуємо безкоштовне пробне заняття тривалістю 30 хвилин. На уроці ви познайомитеся з викладачем, визначите свій рівень мови, обговорите цілі навчання та отримаєте план занять, спеціально розроблений для вас.</p>
+                        <p>так, пакети або оплата по уроках.</p>
                     </div>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>Які матеріали ви використовуєте для навчання?</span>
+                        <span>коли чекати результат?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
-                        <p>Ми використовуємо комбінацію сучасних підручників (Oxford, Cambridge, Pearson), авторських розробок наших викладачів, інтерактивних матеріалів, відео та аудіо ресурсів. Всі матеріали включені в вартість навчання.</p>
+                        <p>перші зміни після кількох занять, з нуля до Elementary — за 2 місяці реально.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>як часто потрібно займатись?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>рекомендовано 2-3 рази на тиждень, але гнучко підлаштовуємось.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>правила перенесення?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>попередити за 12 годин.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Футер -->
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>готові почати із задоволенням?</h2>
+            <p>запишіться на безкоштовний пробний урок і відчуйте, яким може бути навчання без стресу</p>
+            <a href="#contact" class="btn">записатись на безкоштовний урок</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>зв'яжіться з нами</h2>
+                <p>ми із задоволенням відповімо на всі ваші запитання</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>наші контакти</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>телефон</h4>
+                                <p><a href="tel:+14376603208">+1 (437) 660-3208</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>email</h4>
+                                <p><a href="mailto: mooneng.school@gmail.com">mooneng.school@gmail.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <h3>ми в соцмережах</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/mooneng.school/"><i class="fab fa-instagram"></i></a>
+                        <a href="https://t.me/moonlerr"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">імʼя та прізвище*</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telegram">telegram для звʼязку*</label>
+                            <input type="text" id="telegram" name="telegram" required placeholder="@username або посилання">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">email*</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="level">приблизний рівень англійської</label>
+                            <select id="level" name="level">
+                                <option value="A1">A1 (початковий)</option>
+                                <option value="A2">A2 (елементарний)</option>
+                                <option value="B1">B1 (середній)</option>
+                                <option value="B2">B2 (вище середнього)</option>
+                                <option value="unknown">важко сказати</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">ваші цілі або побажання (необовʼязково)</label>
+                            <textarea id="message" name="message"></textarea>
+                        </div>
+                        <div class="form-group trial-checkbox">
+                            <input type="checkbox" id="isTrial" name="isTrial" checked>
+                            <label for="isTrial">це пробне заняття</label>
+                        </div>
+                        <button type="submit" class="btn">надіслати заявку</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-container">
-                <div class="footer-info">
-                    <div class="footer-logo">
-                        <i class="fas fa-moon"></i>
-                        .mooneng
-                    </div>
-                    <p class="footer-desc">Онлайн-школа англійської мови, де кожен знаходить свій шлях до свободи спілкування</p>
-                    
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-telegram"></i></a>
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
+                <div class="footer-col">
+                    <h3>.mooneng.school</h3>
+                    <p>школа англійської мови, де навчання стає задоволенням, а результати — неминучі.</p>
                 </div>
-                
-                <div class="footer-links">
-                    <h3 class="footer-heading">Навігація</h3>
-                    <ul>
-                        <li><a href="#about">Про нас</a></li>
-                        <li><a href="#method">Методика</a></li>
-                        <li><a href="#programs">Програми</a></li>
-                        <li><a href="#reviews">Відгуки</a></li>
-                        <li><a href="#teachers">Викладачі</a></li>
+                <div class="footer-col">
+                    <h3>програми</h3>
+                    <ul class="footer-links">
+                        <li><a href="#programs">індивідуальні</a></li>
+                        <li><a href="#programs">парні</a></li>
+                        <li><a href="#programs">групові</a></li>
+                        <li><a href="#programs">speaking clubs</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-contact">
-                    <h3 class="footer-heading">Контакти</h3>
-                    <ul class="contact-info">
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <span>+1 437 660 3208</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <span>mooneng.school@gmail.com</span>
-                        </li>
-                        <li>
-                            <i class="fab fa-instagram"></i>
-                            <span>@mooneng.school</span>
-                        </li>
-                        <li>
-                            <i class="fab fa-telegram"></i>
-                            <span>@moonlerr</span>
-                        </li>
+                <div class="footer-col">
+                    <h3>навігація</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">про нас</a></li>
+                        <li><a href="#method">методика</a></li>
+                        <li><a href="#pricing">ціни</a></li>
+                        <li><a href="#teachers">викладачі</a></li>
+                        <li><a href="#reviews">відгуки</a></li>
+                        <li><a href="#contact">контакти</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>контакти</h3>
+                    <ul class="footer-links">
+                        <li><a href="tel:+14376603208">+1 (437) 660-3208</a></li>
+                        <li><a href="mailto:mooneng.school@gmail.com">mooneng.school@gmail.com</a></li>
+                        <li><a href="https://www.instagram.com/mooneng.school/">instagram</a></li>
+                        <li><a href="https://t.me/moonlerr">telegram</a></li>
                     </ul>
                 </div>
             </div>
-            
-            <div class="copyright">
-                <p>&copy; 2023 MoonEng School. Усі права захищені</p>
+            <div class="footer-bottom">
+                <p>&copy; 2023 .mooneng.school. всі права захищені.</p>
             </div>
         </div>
     </footer>
 
+    <!-- Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2>дякуємо за вашу заявку!</h2>
+            <p>наш менеджер зв'яжеться з вами в Telegram найближчим часом.</p>
+            <button class="btn" id="modalCloseBtn" style="margin-top: 20px; width: 100%;">добре, чекаю дзвінка</button>
+        </div>
+    </div>
+
     <script>
-        // Анімація лічильників
-        function animateCounters() {
-            const counters = document.querySelectorAll('.stat-number');
-            const speed = 200;
-            
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-count');
-                const count = +counter.innerText;
-                const increment = Math.ceil(target / speed);
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
                 
-                if (count < target) {
-                    counter.innerText = Math.min(count + increment, target);
-                    setTimeout(() => animateCounters(), 1);
+                if (navMenu.classList.contains('active')) {
+                    navMenu.classList.remove('active');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
                 }
-            });
-        }
-        
-        // Перемикання FAQ
-        const faqItems = document.querySelectorAll('.faq-item');
-        
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-            
-            question.addEventListener('click', () => {
-                item.classList.toggle('active');
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
         
-        // Sticky Header
+        // Header scroll effect
+        const header = document.getElementById('header');
         window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
+            if (window.scrollY > 100) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
         });
         
-        // Анімація при скролі
-        function checkScroll() {
-            const elements = document.querySelectorAll('.animate-on-scroll');
-            
-            elements.forEach(element => {
-                const elementPosition = element.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.3;
-                
-                if (elementPosition < screenPosition) {
-                    element.classList.add('is-visible');
-                }
+        // Scroll down button
+        const scrollDownBtn = document.getElementById('scrollDown');
+        scrollDownBtn.addEventListener('click', () => {
+            window.scrollBy({
+                top: window.innerHeight - 80,
+                behavior: 'smooth'
             });
+        });
+        
+        // Counter animation
+        function animateCounter(element, target, duration = 2000) {
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    clearInterval(timer);
+                    current = target;
+                }
+                element.textContent = Math.floor(current).toLocaleString();
+            }, 16);
         }
         
-        window.addEventListener('scroll', checkScroll);
-        window.addEventListener('load', checkScroll);
+        // Trigger counters when visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounter(document.getElementById('studentsCount'), 50);
+                    animateCounter(document.getElementById('countriesCount'), 15);
+                    animateCounter(document.getElementById('materialsCount'), 300);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
         
-        // Ініціалізація
-        document.addEventListener('DOMContentLoaded', () => {
-            animateCounters();
-            checkScroll();
+        const counterSection = document.querySelector('.counter-section');
+        if (counterSection) {
+            observer.observe(counterSection);
+        }
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        const successModal = document.getElementById('successModal');
+        const closeModal = document.getElementById('closeModal');
+        const modalCloseBtn = document.getElementById('modalCloseBtn');
+        
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            successModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            this.reset();
+        });
+        
+        closeModal.addEventListener('click', () => {
+            successModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        modalCloseBtn.addEventListener('click', () => {
+            successModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+        
+        window.addEventListener('click', (e) => {
+            if (e.target === successModal) {
+                successModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Pricing selection
+        const pricingOptions = document.querySelectorAll('.pricing-option[data-type]');
+        const teacherSelects = document.querySelectorAll('.teacher-select');
+        const lessonOptions = document.querySelectorAll('.pricing-option[data-lessons]');
+        const priceDisplay = document.querySelector('.price-display .price');
+        const priceDetails = document.querySelector('.price-display .price-details');
+        
+        let selectedType = 'individual';
+        let selectedTeacher = 'valeria';
+        let selectedLessons = '4';
+        
+        // Pricing type selection
+        pricingOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                pricingOptions.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+                selectedType = option.dataset.type;
+                updatePrice();
+            });
+        });
+        
+        // Teacher selection
+        teacherSelects.forEach(teacher => {
+            teacher.addEventListener('click', () => {
+                teacherSelects.forEach(t => t.classList.remove('active'));
+                teacher.classList.add('active');
+                selectedTeacher = teacher.dataset.teacher;
+                updatePrice();
+            });
+        });
+        
+        // Lesson count selection
+        lessonOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                lessonOptions.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+                selectedLessons = option.dataset.lessons;
+                updatePrice();
+            });
+        });
+        
+        // Update price based on selection
+        function updatePrice() {
+            let price = '';
+            let details = '';
+            
+            if (selectedType === 'individual') {
+                if (selectedTeacher === 'valeria') {
+                    price = selectedLessons === '4' ? '1100 грн' : 
+                            selectedLessons === '8' ? '2000 грн' : '2800 грн';
+                    details = selectedLessons === '4' ? '26 USD / 36 CAD' : 
+                              selectedLessons === '8' ? '48 USD / 66 CAD' : '67 USD / 92 CAD';
+                } else {
+                    price = selectedLessons === '4' ? '990 грн' : 
+                            selectedLessons === '8' ? '1800 грн' : '2500 грн';
+                    details = selectedLessons === '4' ? '24 USD / 33 CAD' : 
+                              selectedLessons === '8' ? '43 USD / 59 CAD' : '60 USD / 82 CAD';
+                }
+            } else if (selectedType === 'pair') {
+                if (selectedTeacher === 'valeria') {
+                    price = selectedLessons === '4' ? '1490 грн' : 
+                            selectedLessons === '8' ? '2700 грн' : '3800 грн';
+                    details = selectedLessons === '4' ? '36 USD / 48 CAD' : 
+                              selectedLessons === '8' ? '65 USD / 88 CAD' : '91 USD / 124 CAD';
+                } else {
+                    price = selectedLessons === '4' ? '1360 грн' : 
+                            selectedLessons === '8' ? '2400 грн' : '3400 грн';
+                    details = selectedLessons === '4' ? '32 USD / 44 CAD' : 
+                              selectedLessons === '8' ? '58 USD / 79 CAD' : '82 USD / 112 CAD';
+                }
+            } else if (selectedType === 'group') {
+                price = selectedLessons === '4' ? '499 грн' : 
+                        selectedLessons === '8' ? '899 грн' : '1299 грн';
+                details = selectedLessons === '4' ? '12 USD / 16 CAD' : 
+                          selectedLessons === '8' ? '22 USD / 30 CAD' : '31 USD / 42 CAD';
+            }
+            
+            priceDisplay.textContent = price;
+            priceDetails.textContent = details;
+        }
+        
+        // Testimonials slider
+        const track = document.getElementById('testimonialsTrack');
+        const dots = document.querySelectorAll('.slider-dot');
+        let currentSlide = 0;
+        
+        function goToSlide(index) {
+            track.style.transform = `translateX(-${index * 100}%)`;
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            currentSlide = index;
+        }
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => goToSlide(index));
+        });
+        
+        // Auto slide
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % 2;
+            goToSlide(currentSlide);
+        }, 5000);
+        
+        // FAQ accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                // Close all other items
+                faqItems.forEach(faq => {
+                    if (faq !== item) {
+                        faq.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+        
+        // Collapsible pricing options
+        const pricingToggle = document.getElementById('pricingToggle');
+        const pricingCollapsible = document.getElementById('pricingOptions');
+        
+        pricingToggle.addEventListener('click', () => {
+            pricingCollapsible.classList.toggle('active');
+            pricingToggle.classList.toggle('active');
         });
     </script>
 </body>
