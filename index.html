@@ -13,14 +13,16 @@
             --beige-primary: #F5F0E6;
             --beige-light: #F9F7F2;
             --beige-dark: #E8DFCE;
-            --olive-accent: #8A9A5B;
-            --olive-dark: #6B7F4D;
+            --olive-accent: #A5B592;
+            --olive-dark: #8A9A5B;
+            --yellow-accent: #FFD166;
             --text-dark: #2B273D;
             --text-gray: #6E6B7B;
             --pure-white: #FFFFFF;
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             --shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.1);
+            --border-radius: 16px;
         }
         
         * {
@@ -88,7 +90,7 @@
         }
         
         .logo i {
-            color: var(--olive-accent);
+            color: var(--yellow-accent);
             margin-right: 8px;
             font-size: 24px;
         }
@@ -122,20 +124,20 @@
             display: inline-block;
             background: var(--olive-accent);
             color: var(--pure-white);
-            padding: 10px 20px;
-            border-radius: 8px;
+            padding: 12px 24px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             transition: var(--transition);
             font-size: 15px;
             margin-left: 15px;
-            box-shadow: 0 4px 15px rgba(138, 154, 91, 0.3);
+            box-shadow: 0 4px 15px rgba(165, 181, 146, 0.3);
         }
         
         .nav-btn:hover {
             background: var(--olive-dark);
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(138, 154, 91, 0.4);
+            box-shadow: 0 6px 20px rgba(165, 181, 146, 0.4);
         }
         
         .mobile-menu-btn {
@@ -195,21 +197,21 @@
             display: inline-block;
             background: var(--olive-accent);
             color: var(--pure-white);
-            padding: 14px 30px;
-            border-radius: 8px;
+            padding: 16px 32px;
+            border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
             transition: var(--transition);
             border: none;
             cursor: pointer;
             font-size: 16px;
-            box-shadow: 0 4px 15px rgba(138, 154, 91, 0.3);
+            box-shadow: 0 4px 15px rgba(165, 181, 146, 0.3);
         }
         
         .btn:hover {
             background: var(--olive-dark);
             transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(138, 154, 91, 0.4);
+            box-shadow: 0 6px 20px rgba(165, 181, 146, 0.4);
         }
         
         .btn-outline {
@@ -220,7 +222,7 @@
         }
         
         .btn-outline:hover {
-            background: rgba(138, 154, 91, 0.1);
+            background: rgba(165, 181, 146, 0.1);
         }
         
         .hero-scroll-down {
@@ -330,12 +332,19 @@
         }
         
         .values-content {
-            background: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.5);
             backdrop-filter: blur(10px);
-            border-radius: 16px;
+            border-radius: var(--border-radius);
             padding: 50px;
             box-shadow: var(--shadow);
             border: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .values-text {
+            flex: 1;
         }
         
         .values-content p {
@@ -345,49 +354,78 @@
             margin-bottom: 30px;
         }
         
-        .values-content p:first-letter {
-            font-size: 24px;
-            color: var(--olive-accent);
-            font-weight: bold;
+        .values-image {
+            flex: 1;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .values-image img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
         
         /* Approach Section */
-        .approach-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
+        .approach-section {
+            position: relative;
+            overflow: hidden;
         }
         
-        .approach-item {
-            background: var(--pure-white);
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            border: 1px solid rgba(43, 39, 61, 0.05);
-        }
-        
-        .approach-item:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--olive-accent);
-        }
-        
-        .approach-item h3 {
-            font-size: 20px;
-            margin-bottom: 15px;
+        .approach-carousel {
             display: flex;
-            align-items: center;
+            transition: transform 0.5s ease;
         }
         
-        .approach-item h3 i {
-            margin-right: 10px;
+        .approach-slide {
+            min-width: 100%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .approach-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
             color: var(--olive-accent);
         }
         
-        .approach-item p {
+        .approach-content {
+            max-width: 600px;
+        }
+        
+        .approach-content h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .approach-content p {
             color: var(--text-gray);
-            font-size: 15px;
+            font-size: 16px;
+        }
+        
+        .carousel-nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+        
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--beige-light);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .carousel-dot.active {
+            background: var(--olive-accent);
+            transform: scale(1.2);
         }
         
         /* Programs Section */
@@ -398,53 +436,25 @@
         }
         
         .program-card {
-            background: var(--pure-white);
-            border-radius: 12px;
-            overflow: hidden;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: var(--border-radius);
+            padding: 30px;
             box-shadow: var(--shadow);
             transition: var(--transition);
-            border: 1px solid rgba(43, 39, 61, 0.05);
-            position: relative;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
         
         .program-card:hover {
             transform: translateY(-10px);
             box-shadow: var(--shadow-hover);
-            border-color: var(--olive-accent);
         }
         
-        .program-img {
-            height: 180px;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .program-img::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.4));
-            z-index: 1;
-        }
-        
-        .program-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-        
-        .program-card:hover .program-img img {
-            transform: scale(1.05);
-        }
-        
-        .program-content {
-            padding: 25px;
-            position: relative;
-            z-index: 2;
+        .program-icon {
+            font-size: 40px;
+            color: var(--olive-accent);
+            margin-bottom: 20px;
         }
         
         .program-content h3 {
@@ -460,10 +470,12 @@
         
         /* Pricing Section */
         .pricing-container {
-            background: var(--pure-white);
-            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: var(--border-radius);
             padding: 40px;
             box-shadow: var(--shadow);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
         
         .pricing-options {
@@ -476,7 +488,7 @@
         .pricing-option {
             background: var(--beige-light);
             padding: 12px 20px;
-            border-radius: 8px;
+            border-radius: 50px;
             cursor: pointer;
             transition: var(--transition);
             font-weight: 500;
@@ -497,13 +509,15 @@
         
         .teacher-select {
             background: var(--beige-light);
-            border-radius: 8px;
+            border-radius: var(--border-radius);
             padding: 15px;
             cursor: pointer;
             transition: var(--transition);
             display: flex;
             align-items: center;
             gap: 10px;
+            flex: 1;
+            min-width: 200px;
         }
         
         .teacher-select.active {
@@ -553,18 +567,6 @@
             margin-bottom: 20px;
         }
         
-        .trial-checkbox {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 30px;
-            gap: 10px;
-        }
-        
-        .trial-checkbox input {
-            accent-color: var(--olive-accent);
-        }
-        
         /* Testimonials Section */
         .testimonials-slider {
             max-width: 800px;
@@ -579,26 +581,45 @@
         }
         
         .testimonial-item {
-            background: var(--pure-white);
-            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: var(--border-radius);
             padding: 30px;
             box-shadow: var(--shadow);
             min-width: 100%;
-            text-align: center;
-            border: 1px solid rgba(43, 39, 61, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .testimonial-chat {
+            background: var(--beige-light);
+            border-radius: 18px 18px 18px 0;
+            padding: 15px;
+            margin-bottom: 15px;
+            position: relative;
+            max-width: 80%;
+        }
+        
+        .testimonial-chat:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -10px;
+            width: 0;
+            height: 0;
+            border-right: 10px solid var(--beige-light);
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
         }
         
         .testimonial-text {
             font-size: 16px;
-            font-style: italic;
-            margin-bottom: 25px;
             color: var(--text-dark);
         }
         
         .testimonial-author {
             display: flex;
             align-items: center;
-            justify-content: center;
+            margin-top: 20px;
         }
         
         .testimonial-author img {
@@ -652,9 +673,11 @@
         .faq-item {
             margin-bottom: 15px;
             border: 1px solid rgba(43, 39, 61, 0.05);
-            border-radius: 8px;
+            border-radius: var(--border-radius);
             overflow: hidden;
             transition: var(--transition);
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
         }
         
         .faq-item:hover {
@@ -663,7 +686,6 @@
         
         .faq-question {
             padding: 18px;
-            background: var(--pure-white);
             cursor: pointer;
             display: flex;
             justify-content: space-between;
@@ -810,11 +832,11 @@
             width: 100%;
             padding: 12px 15px;
             border: 1px solid rgba(43, 39, 61, 0.1);
-            border-radius: 8px;
+            border-radius: var(--border-radius);
             font-size: 14px;
             transition: var(--transition);
             font-family: 'Inter', sans-serif;
-            background: var(--pure-white);
+            background: rgba(255, 255, 255, 0.7);
         }
         
         .contact-form input:focus,
@@ -822,7 +844,7 @@
         .contact-form select:focus {
             border-color: var(--olive-accent);
             outline: none;
-            box-shadow: 0 0 0 3px rgba(138, 154, 91, 0.2);
+            box-shadow: 0 0 0 3px rgba(165, 181, 146, 0.2);
         }
         
         .contact-form textarea {
@@ -918,7 +940,7 @@
         
         .modal-content {
             background: var(--pure-white);
-            border-radius: 12px;
+            border-radius: var(--border-radius);
             max-width: 500px;
             width: 90%;
             padding: 30px;
@@ -965,8 +987,8 @@
                 font-size: 42px;
             }
             
-            .approach-grid {
-                grid-template-columns: 1fr;
+            .values-content {
+                flex-direction: column;
             }
             
             .programs-grid {
@@ -1052,6 +1074,10 @@
             .pricing-container {
                 padding: 30px;
             }
+            
+            .teacher-selection {
+                flex-direction: column;
+            }
         }
         
         @media (max-width: 576px) {
@@ -1065,6 +1091,10 @@
             
             .footer-container {
                 grid-template-columns: 1fr;
+            }
+            
+            .pricing-options, .lesson-options {
+                flex-direction: column;
             }
         }
         
@@ -1091,38 +1121,6 @@
                 transform: translateY(-7px) translateX(-50%);
             }
         }
-        
-        /* Collapsible elements */
-        .collapsible {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-        
-        .collapsible.active {
-            max-height: 500px;
-        }
-        
-        .toggle-btn {
-            background: var(--olive-accent);
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .toggle-btn i {
-            transition: var(--transition);
-        }
-        
-        .toggle-btn.active i {
-            transform: rotate(180deg);
-        }
     </style>
 </head>
 <body>
@@ -1140,7 +1138,7 @@
                     <li><a href="#programs">програми</a></li>
                     <li><a href="#reviews">відгуки</a></li>
                     <li><a href="#teachers">викладачі</a></li>
-                    <li><a href="#contact" class="nav-btn">записатись на пробне</a></li>
+                    <li><a href="#contact" class="nav-btn">пробне заняття</a></li>
                 </ul>
                 <button class="mobile-menu-btn" id="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
@@ -1211,44 +1209,55 @@
                 <p>🌙 англійська, яка надихає</p>
             </div>
             <div class="values-content">
-                <p>навчання має приносити радість. без стресу, зубріння та страху помилитись — тільки живе спілкування, підтримка та природне занурення в мову.</p>
-                <p>у нас англійська стає не обов'язком, а частиною життя. ви говорите з перших занять, росте у своєму ритмі і отримуєте задоволення від процесу.</p>
+                <div class="values-text">
+                    <p>навчання має приносити радість. без стресу, зубріння та страху помилитись — тільки живе спілкування, підтримка та природне занурення в мову.</p>
+                    <p>у нас англійська стає не обов'язком, а частиною життя. ви говорите з перших занять, росте у своєму ритмі і отримуєте задоволення від процесу.</p>
+                </div>
+                <div class="values-image">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Цінності школи">
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Method Section -->
-    <section class="section" id="method">
+    <section class="section approach-section" id="method">
         <div class="container">
             <div class="section-title">
                 <h2>наш підхід</h2>
                 <p>для тих, хто боїться говорити</p>
             </div>
-            <div class="approach-grid">
-                <div class="approach-item">
-                    <h3><i class="fas fa-comment-dots"></i> подолаєш страх говорити вже з першого уроку</h3>
-                    <p>ми створюємо комфортну атмосферу, де помилки — це частина навчання</p>
+            
+            <div class="approach-carousel" id="approachCarousel">
+                <div class="approach-slide">
+                    <div class="approach-icon">💬</div>
+                    <div class="approach-content">
+                        <h3>подолаєш страх говорити вже з першого уроку</h3>
+                        <p>ми створюємо комфортну атмосферу, де помилки — це частина навчання</p>
+                    </div>
                 </div>
-                <div class="approach-item">
-                    <h3><i class="fas fa-chart-line"></i> максимум практики (80% розмови)</h3>
-                    <p>кожне заняття — це розмовна практика, як у реальному житті</p>
+                
+                <div class="approach-slide">
+                    <div class="approach-icon">📈</div>
+                    <div class="approach-content">
+                        <h3>максимум практики (80% розмови)</h3>
+                        <p>кожне заняття — це розмовна практика, як у реальному житті</p>
+                    </div>
                 </div>
-                <div class="approach-item">
-                    <h3><i class="fas fa-user-graduate"></i> індивідуальна програма під твій темп і цілі</h3>
-                    <p>ми враховуємо ваші цілі, рівень та особливості сприйняття</p>
+                
+                <div class="approach-slide">
+                    <div class="approach-icon">🎯</div>
+                    <div class="approach-content">
+                        <h3>індивідуальна програма під твій темп і цілі</h3>
+                        <p>ми враховуємо ваші цілі, рівень та особливості сприйняття</p>
+                    </div>
                 </div>
-                <div class="approach-item">
-                    <h3><i class="fas fa-smile"></i> легка атмосфера, без тиску</h3>
-                    <p>навчання має приносити задоволення, а не стрес</p>
-                </div>
-                <div class="approach-item">
-                    <h3><i class="fas fa-microphone"></i> корекція вимови без стресу</h3>
-                    <p>допоможемо звучати природно і впевнено</p>
-                </div>
-                <div class="approach-item">
-                    <h3><i class="fas fa-book"></i> домашні завдання тільки для результату</h3>
-                    <p>ми даємо тільки те, що дійсно допоможе вам прогресувати</p>
-                </div>
+            </div>
+            
+            <div class="carousel-nav">
+                <div class="carousel-dot active"></div>
+                <div class="carousel-dot"></div>
+                <div class="carousel-dot"></div>
             </div>
         </div>
     </section>
@@ -1262,29 +1271,25 @@
             </div>
             <div class="programs-grid">
                 <div class="program-card">
-                    <div class="program-img">
-                        <img src="https://images.unsplash.com/photo-1541178735493-479c1a27ed24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Індивідуальні заняття">
-                    </div>
+                    <div class="program-icon">👤</div>
                     <div class="program-content">
                         <h3>індивідуальні</h3>
                         <p>для будь-яких тем: побут, робота, навчання, вимова, подолання мовного бар'єру, словниковий запас</p>
                         <a href="#pricing" class="btn" style="width: 100%; text-align: center; margin-top: 15px;">детальніше</a>
                     </div>
                 </div>
+                
                 <div class="program-card">
-                    <div class="program-img">
-                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Парні уроки">
-                    </div>
+                    <div class="program-icon">👥</div>
                     <div class="program-content">
                         <h3>парні уроки</h3>
                         <p>ефективність + інтеракція, швидке покращення комунікації та слухання</p>
                         <a href="#pricing" class="btn" style="width: 100%; text-align: center; margin-top: 15px;">детальніше</a>
                     </div>
                 </div>
+                
                 <div class="program-card">
-                    <div class="program-img">
-                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Групові заняття">
-                    </div>
+                    <div class="program-icon">👪</div>
                     <div class="program-content">
                         <h3>групові та speaking clubs</h3>
                         <p>для прокачки спілкування, активної взаємодії, підготовки до реальних ситуацій</p>
@@ -1303,51 +1308,39 @@
                 <p>оберіть свій ідеальний варіант</p>
             </div>
             <div class="pricing-container">
-                <button class="toggle-btn" id="pricingToggle">
-                    <span>показати варіанти</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
+                <div class="pricing-options">
+                    <div class="pricing-option active" data-type="individual">індивідуальні</div>
+                    <div class="pricing-option" data-type="pair">парні (за двох)</div>
+                    <div class="pricing-option" data-type="group">групові</div>
+                </div>
                 
-                <div class="collapsible" id="pricingOptions">
-                    <div class="pricing-options">
-                        <div class="pricing-option active" data-type="individual">індивідуальні</div>
-                        <div class="pricing-option" data-type="pair">парні (за двох)</div>
-                        <div class="pricing-option" data-type="group">групові</div>
-                    </div>
-                    
-                    <div class="teacher-selection">
-                        <div class="teacher-select active" data-teacher="valeria">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Валерія">
-                            <div>
-                                <h4>Валерія</h4>
-                                <p>засновниця школи</p>
-                            </div>
-                        </div>
-                        <div class="teacher-select" data-teacher="anastasia">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Анастасія">
-                            <div>
-                                <h4>Анастасія</h4>
-                                <p>викладач</p>
-                            </div>
+                <div class="teacher-selection">
+                    <div class="teacher-select active" data-teacher="valeria">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Валерія">
+                        <div>
+                            <h4>Валерія</h4>
+                            <p>засновниця школи</p>
                         </div>
                     </div>
-                    
-                    <div class="lesson-options">
-                        <div class="pricing-option active" data-lessons="4">4 заняття</div>
-                        <div class="pricing-option" data-lessons="8">8 занять</div>
-                        <div class="pricing-option" data-lessons="12">12 занять</div>
+                    <div class="teacher-select" data-teacher="anastasia">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Анастасія">
+                        <div>
+                            <h4>Анастасія</h4>
+                            <p>викладач</p>
+                        </div>
                     </div>
+                </div>
+                
+                <div class="lesson-options">
+                    <div class="pricing-option active" data-lessons="4">4 заняття</div>
+                    <div class="pricing-option" data-lessons="8">8 занять</div>
+                    <div class="pricing-option" data-lessons="12">12 занять</div>
                 </div>
                 
                 <div class="price-display">
                     <div class="price">1100 грн</div>
                     <div class="price-details">26 USD / 36 CAD</div>
                     <a href="#contact" class="btn">придбати пакет</a>
-                </div>
-                
-                <div class="trial-checkbox">
-                    <input type="checkbox" id="trialLesson" checked>
-                    <label for="trialLesson">це пробне заняття</label>
                 </div>
             </div>
         </div>
@@ -1363,8 +1356,8 @@
             <div class="testimonials-slider">
                 <div class="testimonials-track" id="testimonialsTrack">
                     <div class="testimonial-item">
-                        <div class="testimonial-text">
-                            <p>Я завжди боялася говорити англійською, поки не прийшла до Moon English School. Тут така тепла атмосфера, що страх пішов сам собою. Через 3 місяці я поїхала у відпустку сама і вперше у житті вільно спілкувалася з людьми!</p>
+                        <div class="testimonial-chat">
+                            <p class="testimonial-text">Я завжди боялася говорити англійською, поки не прийшла до Moon English School. Тут така тепла атмосфера, що страх пішов сам собою. Через 3 місяці я поїхала у відпустку сама і вперше у житті вільно спілкувалася з людьми!</p>
                         </div>
                         <div class="testimonial-author">
                             <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Анна">
@@ -1375,8 +1368,8 @@
                         </div>
                     </div>
                     <div class="testimonial-item">
-                        <div class="testimonial-text">
-                            <p>Після року навчання я зміг пройти співбесіду англійською та отримати роботу в міжнародній компанії. Валерія не просто викладач, а справжній мотиватор!</p>
+                        <div class="testimonial-chat">
+                            <p class="testimonial-text">Після року навчання я зміг пройти співбесіду англійською та отримати роботу в міжнародній компанії. Валерія не просто викладач, а справжній мотиватор!</p>
                         </div>
                         <div class="testimonial-author">
                             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Олексій">
@@ -1529,20 +1522,15 @@
                         <div class="form-group">
                             <label for="level">приблизний рівень англійської</label>
                             <select id="level" name="level">
-                                <option value="A1">A1 (початковий)</option>
-                                <option value="A2">A2 (елементарний)</option>
-                                <option value="B1">B1 (середній)</option>
-                                <option value="B2">B2 (вище середнього)</option>
-                                <option value="unknown">важко сказати</option>
+                                <option value="A1-A2">A1-A2 (початковий)</option>
+                                <option value="A2-B1">A2-B1 (середній)</option>
+                                <option value="B1-B2">B1-B2 (вище середнього)</option>
+                                <option value="B2-C1">B2-C1 (просунутий)</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="message">ваші цілі або побажання (необовʼязково)</label>
                             <textarea id="message" name="message"></textarea>
-                        </div>
-                        <div class="form-group trial-checkbox">
-                            <input type="checkbox" id="isTrial" name="isTrial" checked>
-                            <label for="isTrial">це пробне заняття</label>
                         </div>
                         <button type="submit" class="btn">надіслати заявку</button>
                     </form>
@@ -1613,7 +1601,7 @@
         mobileMenuBtn.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             mobileMenuBtn.innerHTML = navMenu.classList.contains('active') ? 
-                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars'></i>';
         });
         
         // Smooth scrolling for anchor links
@@ -1663,7 +1651,7 @@
                     clearInterval(timer);
                     current = target;
                 }
-                element.textContent = Math.floor(current).toLocaleString();
+                element.textContent = Math.floor(current) + '+';
             }, 16);
         }
         
@@ -1837,14 +1825,28 @@
             });
         });
         
-        // Collapsible pricing options
-        const pricingToggle = document.getElementById('pricingToggle');
-        const pricingCollapsible = document.getElementById('pricingOptions');
+        // Approach carousel
+        const approachCarousel = document.getElementById('approachCarousel');
+        const carouselDots = document.querySelectorAll('.carousel-dot');
+        let currentCarouselSlide = 0;
         
-        pricingToggle.addEventListener('click', () => {
-            pricingCollapsible.classList.toggle('active');
-            pricingToggle.classList.toggle('active');
+        function goToCarouselSlide(index) {
+            approachCarousel.style.transform = `translateX(-${index * 100}%)`;
+            carouselDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+            currentCarouselSlide = index;
+        }
+        
+        carouselDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => goToCarouselSlide(index));
         });
+        
+        // Auto slide for approach carousel
+        setInterval(() => {
+            currentCarouselSlide = (currentCarouselSlide + 1) % 3;
+            goToCarouselSlide(currentCarouselSlide);
+        }, 4000);
     </script>
 </body>
 </html>
